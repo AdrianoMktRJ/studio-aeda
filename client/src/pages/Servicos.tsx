@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { Bot, BarChart3, Megaphone, Cog, Lightbulb } from "lucide-react";
+import { Bot, BarChart3, Megaphone, Cog } from "lucide-react";
 
 export default function Servicos() {
   const services = [
@@ -53,18 +53,6 @@ export default function Servicos() {
         "Roadmap de implementação",
         "Treinamento de equipes",
         "Suporte contínuo",
-      ],
-    },
-    {
-      icon: Lightbulb,
-      title: "Desenvolvimento de Soluções Custom",
-      description:
-        "Criamos soluções sob medida para desafios específicos do seu negócio. Do conceito à implementação, desenvolvemos ferramentas que realmente funcionam.",
-      features: [
-        "Aplicações web e mobile",
-        "Sistemas personalizados",
-        "APIs e integrações",
-        "Prototipagem rápida",
       ],
     },
   ];

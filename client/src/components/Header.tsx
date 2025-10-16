@@ -32,8 +32,8 @@ export default function Header() {
                 <img src="/owl-aeda.png" alt="AEDA Logo" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col justify-center items-start">
-                <span className="text-xl font-bold text-gray-900 leading-none">Studio AEDA Digital</span>
-                <span className="text-xs text-gray-600 leading-none mt-1">Gestão inteligente com IA</span>
+                <span className="text-xl font-bold text-black leading-none">Studio AEDA Digital</span>
+                <span className="text-xs text-[#a6a6a6] leading-none mt-1">Gestão inteligente com IA</span>
               </div>
             </div>
           </Link>

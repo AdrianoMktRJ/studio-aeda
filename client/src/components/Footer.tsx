@@ -25,9 +25,9 @@ export default function Footer() {
               <div className="w-12 h-12 rounded-lg flex items-center justify-center p-1">
                 <img src="/owl-aeda.png" alt="AEDA Logo" className="w-full h-full object-contain" />
               </div>
-              <div className="flex flex-col justify-center">
-                <span className="text-lg font-bold leading-tight">Studio AEDA Digital</span>
-                <span className="text-xs text-gray-400 leading-tight">Intelligent management with AI</span>
+              <div className="flex flex-col justify-center items-start">
+                <span className="text-lg font-bold leading-none">Studio AEDA Digital</span>
+                <span className="text-xs text-gray-400 leading-none mt-1">Intelligent management with AI</span>
               </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">

@@ -87,10 +87,10 @@ export default function Home() {
             {/* Texto */}
             <div>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Gestão inteligente com IA para produtividade e crescimento
+                Gestão inteligente com IA para produtividade e&nbsp;crescimento
               </h1>
               <p className="text-xl mb-8 text-purple-100">
-                Soluções digitais personalizadas para empresas e profissionais que buscam clareza e resultados.
+                Soluções digitais personalizadas para empresas e profissionais que buscam clareza e&nbsp;resultados.
               </p>
               
               <Button
@@ -98,7 +98,7 @@ export default function Home() {
                 className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
                 asChild
               >
-                <Link href="/contato">
+                <Link href="/diagnostico">
                   Obtenha seu Diagnóstico Gratuito de IA
                 </Link>
               </Button>
@@ -110,28 +110,17 @@ export default function Home() {
 
             {/* Imagem da Coruja com elementos visuais */}
             <div className="relative flex items-center justify-center">
-              {/* Borda decorativa com gradiente */}
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-400 via-pink-500 to-purple-600 rounded-3xl blur-2xl opacity-30"></div>
+              {/* Borda decorativa com gradiente sutil */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600 rounded-3xl blur-3xl opacity-20"></div>
               
-              {/* Container da coruja */}
-              <div className="relative bg-purple-700/50 backdrop-blur-sm rounded-3xl p-8 border-2 border-purple-500/30">
+              {/* Coruja sem borda */}
+              <div className="relative">
                 <img 
                   src="/owl-aeda.png" 
                   alt="Coruja AEDA" 
-                  className="w-64 h-64 object-contain"
+                  className="w-80 h-80 object-contain drop-shadow-2xl"
                 />
               </div>
-              
-              {/* Linha ondulada decorativa (inspirada na imagem de referência) */}
-              <svg className="absolute -right-10 top-0 w-full h-full" viewBox="0 0 300 400">
-                <path
-                  d="M 50 50 Q 100 100 50 150 T 50 250 Q 100 300 50 350"
-                  stroke="#FF6B6B"
-                  strokeWidth="4"
-                  fill="none"
-                  className="drop-shadow-lg"
-                />
-              </svg>
             </div>
           </div>
         </div>
@@ -194,7 +183,7 @@ export default function Home() {
             className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
             asChild
           >
-            <Link href="/contato">Quero Meu Diagnóstico Gratuito</Link>
+            <Link href="/diagnostico">Quero Meu Diagnóstico Gratuito</Link>
           </Button>
         </div>
       </section>

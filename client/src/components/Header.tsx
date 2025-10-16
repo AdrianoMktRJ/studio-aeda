@@ -28,8 +28,8 @@ export default function Header() {
           {/* Logo */}
           <Link href="/">
             <div className="flex items-center gap-3 cursor-pointer">
-              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center p-1">
-                <img src="/owl-aeda.png" alt="AEDA Logo" className="w-full h-full object-contain" />
+              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center p-1 transition-transform hover:scale-110 hover:rotate-3 duration-300">
+                <img src="/owl-aeda.png" alt="AEDA Logo" className="w-full h-full object-contain animate-pulse" />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-gray-900">Studio AEDA</span>
@@ -85,7 +85,7 @@ export default function Header() {
               className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-8 py-6 rounded-lg shadow-md transition-all"
               asChild
             >
-              <Link href="/contato">Diagnóstico Gratuito</Link>
+              <Link href="/diagnostico">Diagnóstico Gratuito</Link>
             </Button>
           </nav>
 
@@ -136,7 +136,7 @@ export default function Header() {
                 className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold mx-4 mt-2 py-6"
                 asChild
               >
-                <Link href="/contato">Diagnóstico Gratuito</Link>
+                <Link href="/diagnostico">Diagnóstico Gratuito</Link>
               </Button>
             </nav>
           </div>

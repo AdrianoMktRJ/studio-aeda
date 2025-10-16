@@ -31,9 +31,9 @@ export default function Header() {
               <div className="w-12 h-12 rounded-lg flex items-center justify-center p-1 transition-transform group-hover:scale-105 duration-200">
                 <img src="/owl-aeda.png" alt="AEDA Logo" className="w-full h-full object-contain" />
               </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-gray-900">Studio AEDA Digital</span>
-                <span className="text-xs text-gray-600">Gestão inteligente com IA</span>
+              <div className="flex flex-col justify-center">
+                <span className="text-xl font-bold text-gray-900 leading-tight">Studio AEDA Digital</span>
+                <span className="text-xs text-gray-600 leading-tight">Gestão inteligente com IA</span>
               </div>
             </div>
           </Link>

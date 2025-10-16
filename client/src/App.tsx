@@ -11,6 +11,7 @@ import Contato from "./pages/Contato";
 import Diagnostico from "./pages/Diagnostico";
 
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />

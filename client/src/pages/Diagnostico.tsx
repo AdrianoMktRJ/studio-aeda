@@ -3,8 +3,10 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { CheckCircle, Zap, Target } from "lucide-react";
+import { CheckCircle, Zap, Target, Loader2 } from "lucide-react";
 import { useState } from "react";
+import { trpc } from "@/lib/trpc";
+import { toast } from "sonner";
 
 export default function Diagnostico() {
   const [formData, setFormData] = useState({
@@ -16,10 +18,31 @@ export default function Diagnostico() {
     challenge: "",
   });
 
+  const submitMutation = trpc.forms.submitDiagnostico.useMutation({
+    onSuccess: () => {
+      toast.success("Diagnóstico solicitado com sucesso!", {
+        description: "Nossa equipe entrará em contato em breve.",
+      });
+      // Limpar formulário
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        employees: "",
+        challenge: "",
+      });
+    },
+    onError: (error) => {
+      toast.error("Erro ao enviar diagnóstico", {
+        description: error.message,
+      });
+    },
+  });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Diagnóstico solicitado:", formData);
-    alert("Diagnóstico solicitado com sucesso! Nossa equipe entrará em contato em breve.");
+    submitMutation.mutate(formData);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -208,9 +231,17 @@ export default function Diagnostico() {
                 <Button
                   type="submit"
                   size="lg"
+                  disabled={submitMutation.isPending}
                   className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-7 text-lg rounded-lg shadow-md transition-all"
                 >
-                  Solicitar Diagnóstico Gratuito
+                  {submitMutation.isPending ? (
+                    <>
+                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                      Enviando...
+                    </>
+                  ) : (
+                    "Solicitar Diagnóstico Gratuito"
+                  )}
                 </Button>
 
                 <p className="text-sm text-gray-500 text-center">

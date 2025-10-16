@@ -1,3 +1,4 @@
+import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import Header from "@/components/Header";
@@ -5,6 +6,10 @@ import Footer from "@/components/Footer";
 import { Zap, DollarSign, Target, TrendingUp, CheckCircle, Sparkles } from "lucide-react";
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   const results = [
     {
       icon: Zap,

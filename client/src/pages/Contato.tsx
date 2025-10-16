@@ -3,23 +3,42 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, Clock, MapPin } from "lucide-react";
+import { Mail, Phone, Clock, MapPin, Loader2 } from "lucide-react";
 import { useState } from "react";
+import { trpc } from "@/lib/trpc";
+import { toast } from "sonner";
 
 export default function Contato() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    company: "",
     message: "",
+  });
+
+  const submitMutation = trpc.forms.submitContato.useMutation({
+    onSuccess: () => {
+      toast.success("Mensagem enviada com sucesso!", {
+        description: "Entraremos em contato em breve.",
+      });
+      // Limpar formulário
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    },
+    onError: (error) => {
+      toast.error("Erro ao enviar mensagem", {
+        description: error.message,
+      });
+    },
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aqui você pode adicionar a lógica de envio do formulário
-    console.log("Form submitted:", formData);
-    alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+    submitMutation.mutate(formData);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -133,20 +152,7 @@ export default function Contato() {
                   />
                 </div>
 
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                    Empresa
-                  </label>
-                  <Input
-                    id="company"
-                    name="company"
-                    type="text"
-                    value={formData.company}
-                    onChange={handleChange}
-                    placeholder="Nome da sua empresa"
-                    className="w-full"
-                  />
-                </div>
+
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
@@ -166,9 +172,17 @@ export default function Contato() {
                 <Button
                   type="submit"
                   size="lg"
+                  disabled={submitMutation.isPending}
                   className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-6 text-lg rounded-lg shadow-md transition-all"
                 >
-                  Enviar Mensagem
+                  {submitMutation.isPending ? (
+                    <>
+                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                      Enviando...
+                    </>
+                  ) : (
+                    "Enviar Mensagem"
+                  )}
                 </Button>
               </form>
             </div>

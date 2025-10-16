@@ -224,7 +224,7 @@ export default function Diagnostico() {
                     required
                     value={formData.challenge}
                     onChange={handleChange}
-                    placeholder="Descreva o principal desafio que você gostaria de resolver com IA..."
+                    placeholder="Ex: Processos manuais que tomam muito tempo, dificuldade em analisar dados, necessidade de automatizar atendimento..."
                     className="w-full min-h-[120px]"
                   />
                 </div>

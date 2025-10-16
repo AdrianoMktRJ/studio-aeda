@@ -165,7 +165,7 @@ export default function Contato() {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Conte-nos sobre seu desafio ou objetivo..."
+                    placeholder="Descreva brevemente como podemos ajudar sua empresa a crescer com IA..."
                     className="w-full min-h-[150px]"
                   />
                 </div>

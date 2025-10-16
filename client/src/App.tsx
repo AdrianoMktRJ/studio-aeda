@@ -10,6 +10,7 @@ import Servicos from "./pages/Servicos";
 import Contato from "./pages/Contato";
 import Diagnostico from "./pages/Diagnostico";
 import Privacidade from "./pages/Privacidade";
+import DiagnosticoDetalhado from "./pages/DiagnosticoDetalhado";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -20,6 +21,7 @@ function Router() {
       <Route path={"/servicos"} component={Servicos} />
       <Route path={"/contato"} component={Contato} />
       <Route path={"/diagnostico"} component={Diagnostico} />
+      <Route path={"/diagnostico-detalhado"} component={DiagnosticoDetalhado} />
       <Route path={"/privacidade"} component={Privacidade} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

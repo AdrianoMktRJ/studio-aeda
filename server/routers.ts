@@ -64,20 +64,15 @@ export const appRouter = router({
           content: message,
         });
 
-        // Enviar mensagem para WhatsApp
-        const whatsappMessage = `🔔 *Novo Diagnóstico Solicitado*\n\n` +
-          `👤 Nome: ${input.name}\n` +
-          `📧 Email: ${input.email}\n` +
-          `📱 Telefone: ${input.phone}\n` +
-          `🏭 Empresa: ${input.company}\n` +
-          `👥 Funcionários: ${input.employees}\n` +
-          `🎯 Desafio: ${input.challenge}`;
-        
-        // Enviar para WhatsApp (usando API do WhatsApp Business ou serviço de terceiros)
-        // Por enquanto, a notificação do Manus já está funcionando
-        // Para integração real com WhatsApp, você precisará de uma API como Twilio, Evolution API, etc.
+        // Enviar mensagem de agradecimento via WhatsApp
+        const { whatsappService } = await import("./services/whatsapp");
+        await whatsappService.sendThankYouMessage(input.phone, input.name);
 
-        return { success: true, id };
+        return { 
+          success: true, 
+          id,
+          redirectUrl: "/diagnostico-detalhado"
+        };
       }),
 
     submitContato: publicProcedure
@@ -130,6 +125,73 @@ export const appRouter = router({
         // Para integração real com WhatsApp, você precisará de uma API como Twilio, Evolution API, etc.
 
         return { success: true, id };
+      }),
+
+    submitDetailedDiagnosis: publicProcedure
+      .input(
+        z.object({
+          name: z.string(),
+          email: z.string().email(),
+          phone: z.string(),
+          company: z.string(),
+          clientProfile: z.string(),
+          clientLocation: z.string(),
+          clientPainPoints: z.string(),
+          instagramUrl: z.string().optional(),
+          facebookUrl: z.string().optional(),
+          linkedinUrl: z.string().optional(),
+          websiteUrl: z.string().optional(),
+          otherChannels: z.string().optional(),
+          timeConsumingProcesses: z.string(),
+          manualTasks: z.string(),
+          growthGoals: z.string(),
+          monthlyRevenue: z.string(),
+          desiredResults: z.string(),
+        })
+      )
+      .mutation(async ({ input }) => {
+        // Gerar ID único
+        const id = `detailed_${Date.now()}_${Math.random().toString(36).substring(7)}`;
+
+        // Salvar no banco de dados (expandir tabela depois)
+        const detailedData = JSON.stringify(input);
+        
+        // Enviar notificação ao proprietário com dados completos
+        const message = `📊 **Diagnóstico Detalhado Recebido**\n\n` +
+          `👤 **Nome:** ${input.name}\n` +
+          `📧 **Email:** ${input.email}\n` +
+          `📱 **WhatsApp:** ${input.phone}\n` +
+          `🏭 **Empresa:** ${input.company}\n\n` +
+          `**Perfil dos Clientes:**\n${input.clientProfile}\n\n` +
+          `**Localização:** ${input.clientLocation}\n\n` +
+          `**Dores dos Clientes:**\n${input.clientPainPoints}\n\n` +
+          `**Redes Sociais:**\n` +
+          `${input.instagramUrl ? `📷 Instagram: ${input.instagramUrl}\n` : ""}` +
+          `${input.facebookUrl ? `👍 Facebook: ${input.facebookUrl}\n` : ""}` +
+          `${input.linkedinUrl ? `💼 LinkedIn: ${input.linkedinUrl}\n` : ""}` +
+          `${input.websiteUrl ? `🌐 Site: ${input.websiteUrl}\n` : ""}\n` +
+          `**Processos que Consomem Tempo:**\n${input.timeConsumingProcesses}\n\n` +
+          `**Tarefas Manuais:**\n${input.manualTasks}\n\n` +
+          `**Faturamento Mensal:** ${input.monthlyRevenue}\n` +
+          `**Objetivos de Crescimento:**\n${input.growthGoals}\n\n` +
+          `**Expectativas com IA:**\n${input.desiredResults}`;
+
+        await notifyOwner({
+          title: "📊 Diagnóstico Detalhado - Studio AEDA",
+          content: message,
+        });
+
+        // Enviar link de agendamento via WhatsApp
+        const { whatsappService } = await import("./services/whatsapp");
+        const { calendarService } = await import("./services/calendar");
+        
+        const schedulingUrl = calendarService.generateSchedulingUrl(input.email, input.name);
+        await whatsappService.sendSchedulingLink(input.phone, input.name, schedulingUrl);
+
+        // TODO: Integrar com sistema de análise de redes sociais
+        // TODO: Gerar relatório PDF automaticamente
+
+        return { success: true, id, schedulingUrl };
       }),
   }),
 });

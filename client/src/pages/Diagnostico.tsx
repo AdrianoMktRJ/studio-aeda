@@ -6,10 +6,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle, Zap, Target, Loader2 } from "lucide-react";
 import { useState } from "react";
+import { useLocation } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 
 export default function Diagnostico() {
+  const [, setLocation] = useLocation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",

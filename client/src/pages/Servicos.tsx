@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Bot, BarChart3, Megaphone, Cog, Lightbulb, Users } from "lucide-react";
@@ -185,6 +186,7 @@ export default function Servicos() {
       </section>
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { Zap, DollarSign, Target, TrendingUp, CheckCircle, Sparkles } from "lucide-react";
 
 export default function Home() {
@@ -194,6 +195,7 @@ export default function Home() {
       </section>
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

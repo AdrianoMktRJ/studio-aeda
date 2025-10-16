@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { Lightbulb, Eye, Users, Zap, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -177,6 +178,7 @@ export default function Sobre() {
       </section>
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

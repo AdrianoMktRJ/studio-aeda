@@ -10,27 +10,27 @@ export default function Sobre() {
     {
       icon: Lightbulb,
       title: "Inovação",
-      description: "Buscamos sempre as melhores e mais atuais soluções&nbsp;tecnológicas",
+      description: "Buscamos sempre as melhores e mais atuais soluções tecnológicas",
     },
     {
       icon: Eye,
       title: "Clareza",
-      description: "Comunicação transparente e resultados&nbsp;compreensíveis",
+      description: "Comunicação transparente e resultados compreensíveis",
     },
     {
       icon: Users,
       title: "Personalização",
-      description: "Cada solução é única, desenhada para suas necessidades&nbsp;específicas",
+      description: "Cada solução é única, desenhada para suas necessidades específicas",
     },
     {
       icon: Zap,
       title: "Produtividade",
-      description: "Foco em otimizar processos e maximizar&nbsp;eficiência",
+      description: "Foco em otimizar processos e maximizar eficiência",
     },
     {
       icon: TrendingUp,
       title: "Crescimento",
-      description: "Comprometidos com o sucesso e expansão dos nossos&nbsp;clientes",
+      description: "Comprometidos com o sucesso e expansão dos nossos clientes",
     },
   ];
 
@@ -44,7 +44,7 @@ export default function Sobre() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Sobre o Studio AEDA Digital</h1>
           <p className="text-xl max-w-3xl mx-auto text-purple-100">
             Muito mais que uma agência: somos gestores de soluções inteligentes de IA. Nosso propósito 
-            é tornar a inteligência artificial acessível e estratégica para empresas e&nbsp;profissionais.
+            é tornar a inteligência artificial acessível e estratégica para empresas e profissionais.
           </p>
         </div>
       </section>
@@ -57,7 +57,7 @@ export default function Sobre() {
             O Studio AEDA Digital nasceu da percepção de que a inteligência artificial não deveria ser 
             um privilégio de grandes corporações. Fundada com a missão de democratizar o acesso a 
             tecnologias avançadas, nossa empresa se dedica a criar soluções personalizadas que realmente 
-            fazem diferença no dia a dia dos nossos&nbsp;clientes.
+            fazem diferença no dia a dia dos nossos clientes.
           </p>
         </div>
       </section>
@@ -69,7 +69,7 @@ export default function Sobre() {
           <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto text-center mb-12">
             Acreditamos que a tecnologia deve servir às pessoas, e não o contrário. Por isso, desenvolvemos 
             soluções que não são apenas poderosas, mas também intuitivas e acessíveis. Nosso objetivo é 
-            transformar complexidade em clareza, dados em insights e processos em&nbsp;resultados.
+            transformar complexidade em clareza, dados em insights e processos em resultados.
           </p>
           
           {/* Citação em destaque */}

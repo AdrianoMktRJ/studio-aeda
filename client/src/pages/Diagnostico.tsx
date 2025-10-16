@@ -57,17 +57,17 @@ export default function Diagnostico() {
     {
       icon: CheckCircle,
       title: "Análise Gratuita",
-      description: "Avaliação completa dos seus processos sem nenhum&nbsp;custo",
+      description: "Avaliação completa dos seus processos sem nenhum custo",
     },
     {
       icon: Zap,
       title: "Identificação de Oportunidades",
-      description: "3 pontos específicos de automação para reduzir&nbsp;custos",
+      description: "3 pontos específicos de automação para reduzir custos",
     },
     {
       icon: Target,
       title: "Plano de Ação",
-      description: "Roadmap personalizado para implementação de&nbsp;IA",
+      description: "Roadmap personalizado para implementação de IA",
     },
   ];
 
@@ -79,11 +79,11 @@ export default function Diagnostico() {
       <section className="bg-gradient-to-br from-[#5b3cc4] to-[#4a2ea3] text-white pt-32 pb-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Diagnóstico Gratuito de&nbsp;IA
+            Diagnóstico Gratuito de IA
           </h1>
           <p className="text-xl max-w-3xl mx-auto text-purple-100">
             Descubra como a inteligência artificial pode transformar seu negócio. 
-            Analisamos seus processos e identificamos oportunidades de&nbsp;automação.
+            Analisamos seus processos e identificamos oportunidades de automação.
           </p>
         </div>
       </section>
@@ -92,7 +92,7 @@ export default function Diagnostico() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
-            O que você recebe no&nbsp;diagnóstico
+            O que você recebe no diagnóstico
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
@@ -258,7 +258,7 @@ export default function Diagnostico() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
-            Como funciona o&nbsp;diagnóstico
+            Como funciona o diagnóstico
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
@@ -266,22 +266,22 @@ export default function Diagnostico() {
               {
                 step: "1",
                 title: "Você preenche o formulário",
-                description: "Conte-nos sobre seu negócio e seus&nbsp;desafios",
+                description: "Conte-nos sobre seu negócio e seus desafios",
               },
               {
                 step: "2",
                 title: "Agendamos uma conversa",
-                description: "Nossa equipe entra em contato em até 24&nbsp;horas",
+                description: "Nossa equipe entra em contato em até 24 horas",
               },
               {
                 step: "3",
                 title: "Análise dos processos",
-                description: "Avaliamos seus processos e identificamos&nbsp;oportunidades",
+                description: "Avaliamos seus processos e identificamos oportunidades",
               },
               {
                 step: "4",
                 title: "Recebe o diagnóstico",
-                description: "Apresentamos 3 pontos de automação e um plano de&nbsp;ação",
+                description: "Apresentamos 3 pontos de automação e um plano de ação",
               },
             ].map((phase, index) => (
               <div key={index} className="text-center">

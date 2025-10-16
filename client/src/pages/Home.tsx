@@ -15,22 +15,22 @@ export default function Home() {
     {
       icon: Zap,
       title: "Aumente Sua Produtividade",
-      description: "Automatize tarefas repetitivas e foque no que realmente&nbsp;importa",
+      description: "Automatize tarefas repetitivas e foque no que realmente importa",
     },
     {
       icon: DollarSign,
       title: "Reduza Custos Operacionais",
-      description: "Otimize processos e elimine desperdícios com inteligência&nbsp;artificial",
+      description: "Otimize processos e elimine desperdícios com inteligência artificial",
     },
     {
       icon: Target,
       title: "Atraia Clientes Qualificados",
-      description: "Estratégias inteligentes de tráfego pago para máximo&nbsp;ROI",
+      description: "Estratégias inteligentes de tráfego pago para máximo ROI",
     },
     {
       icon: TrendingUp,
       title: "Tome Decisões Claras",
-      description: "Dados transformados em insights acionáveis para seu&nbsp;negócio",
+      description: "Dados transformados em insights acionáveis para seu negócio",
     },
   ];
 
@@ -39,19 +39,19 @@ export default function Home() {
       icon: CheckCircle,
       title: "Clareza Total",
       description:
-        "Você sempre saberá o que está sendo feito e por&nbsp;quê. Nossos relatórios são feitos para serem compreendidos, não para&nbsp;confundir.",
+        "Você sempre saberá o que está sendo feito e por quê. Nossos relatórios são feitos para serem compreendidos, não para confundir.",
     },
     {
       icon: TrendingUp,
       title: "Foco no ROI",
       description:
-        "Nossa primeira pergunta sempre será sobre seu retorno de investimento. A tecnologia é o meio, seu lucro é o&nbsp;fim.",
+        "Nossa primeira pergunta sempre será sobre seu retorno de investimento. A tecnologia é o meio, seu lucro é o fim.",
     },
     {
       icon: Sparkles,
       title: "Soluções, Não Pacotes",
       description:
-        "Não vendemos pacotes prontos. Escutamos seu desafio e desenhamos a solução exata que você&nbsp;precisa, sob medida para seu&nbsp;crescimento.",
+        "Não vendemos pacotes prontos. Escutamos seu desafio e desenhamos a solução exata que você precisa, sob medida para seu crescimento.",
     },
   ];
 
@@ -93,10 +93,10 @@ export default function Home() {
             {/* Texto */}
             <div>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Gestão inteligente com IA: mais produtividade, menos&nbsp;complexidade
+                Gestão inteligente com IA: mais produtividade, menos complexidade
               </h1>
               <p className="text-xl mb-8 text-purple-100">
-                Transformamos IA em clareza: soluções sob medida para empresas que querem crescer&nbsp;rápido.
+                Transformamos IA em clareza: soluções sob medida para empresas que querem crescer rápido.
               </p>
               
               <Button
@@ -105,7 +105,7 @@ export default function Home() {
                 asChild
               >
                 <Link href="/diagnostico">
-                  Descubra 3 Oportunidades de IA no Seu&nbsp;Negócio
+                  Descubra 3 Oportunidades de IA no Seu Negócio
                 </Link>
               </Button>
               
@@ -136,7 +136,7 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
-            O que você ganha trabalhando com&nbsp;IA
+            O que você ganha trabalhando com IA
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -181,7 +181,7 @@ export default function Home() {
       <section className="bg-gradient-to-br from-[#5b3cc4] to-[#4a2ea3] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-8">
-            Vamos descobrir juntos o potencial da IA no seu&nbsp;negócio?
+            Vamos descobrir juntos o potencial da IA no seu negócio?
           </h2>
           
           <Button

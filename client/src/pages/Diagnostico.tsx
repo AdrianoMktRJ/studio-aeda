@@ -76,7 +76,7 @@ export default function Diagnostico() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-600 to-purple-800 text-white pt-32 pb-20">
+      <section className="bg-gradient-to-br from-[#5b3cc4] to-[#4a2ea3] text-white pt-32 pb-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Diagnóstico Gratuito de&nbsp;IA
@@ -101,7 +101,7 @@ export default function Diagnostico() {
                 key={index}
                 className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow"
               >
-                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-[#5b3cc4] rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900">{benefit.title}</h3>
@@ -203,7 +203,7 @@ export default function Diagnostico() {
                     required
                     value={formData.employees}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#5b3cc4]"
                   >
                     <option value="">Selecione</option>
                     <option value="1-10">1-10 funcionários</option>
@@ -233,7 +233,7 @@ export default function Diagnostico() {
                   type="submit"
                   size="lg"
                   disabled={submitMutation.isPending}
-                  className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-7 text-lg rounded-lg shadow-md transition-all"
+                  className="w-full bg-[#5b3cc4] hover:bg-[#5b3cc4] text-white font-semibold py-7 text-lg rounded-lg shadow-md transition-all"
                 >
                   {submitMutation.isPending ? (
                     <>
@@ -285,7 +285,7 @@ export default function Diagnostico() {
               },
             ].map((phase, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-purple-800 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#5b3cc4] to-[#4a2ea3] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg">
                   {phase.step}
                 </div>
                 <h3 className="text-lg font-semibold mb-2 text-gray-900">{phase.title}</h3>

@@ -60,7 +60,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section com fundo visual de IA */}
-      <section className="relative bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800 text-white pt-32 pb-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#5b3cc4] via-[#5b3cc4] to-[#4a2ea3] text-white pt-32 pb-20 overflow-hidden">
         {/* Elementos visuais de IA - linhas e formas sutis */}
         <div className="absolute inset-0 opacity-20">
           <svg className="absolute top-20 right-10 w-96 h-96" viewBox="0 0 400 400">
@@ -82,7 +82,7 @@ export default function Home() {
           
           {/* Círculos decorativos */}
           <div className="absolute top-40 right-32 w-32 h-32 rounded-full border-2 border-blue-400"></div>
-          <div className="absolute top-60 right-20 w-20 h-20 rounded-full border-2 border-yellow-400"></div>
+          <div className="absolute top-60 right-20 w-20 h-20 rounded-full border-2 border-[#ffd600]"></div>
           
           {/* Padrão de grade sutil */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
@@ -101,7 +101,7 @@ export default function Home() {
               
               <Button
                 size="lg"
-                className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
+                className="bg-[#ffd600] hover:bg-[#ffd600] text-gray-900 font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
                 asChild
               >
                 <Link href="/diagnostico">
@@ -117,7 +117,7 @@ export default function Home() {
             {/* Imagem da Coruja com elementos visuais */}
             <div className="relative flex items-center justify-center">
               {/* Borda decorativa com gradiente sutil */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600 rounded-3xl blur-3xl opacity-20"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-400 via-purple-500 to-[#5b3cc4] rounded-3xl blur-3xl opacity-20"></div>
               
               {/* Coruja sem borda */}
               <div className="relative">
@@ -146,7 +146,7 @@ export default function Home() {
                 className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                  <result.icon className="w-6 h-6 text-purple-600" />
+                  <result.icon className="w-6 h-6 text-[#5b3cc4]" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900">{result.title}</h3>
                 <p className="text-gray-600">{result.description}</p>
@@ -167,7 +167,7 @@ export default function Home() {
             {commitments.map((commitment, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <commitment.icon className="w-8 h-8 text-purple-600" />
+                  <commitment.icon className="w-8 h-8 text-[#5b3cc4]" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-3 text-gray-900">{commitment.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{commitment.description}</p>
@@ -178,7 +178,7 @@ export default function Home() {
       </section>
 
       {/* CTA Final */}
-      <section className="bg-gradient-to-br from-purple-600 to-purple-800 text-white py-20">
+      <section className="bg-gradient-to-br from-[#5b3cc4] to-[#4a2ea3] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-8">
             Vamos descobrir juntos o potencial da IA no seu negócio?
@@ -186,7 +186,7 @@ export default function Home() {
           
           <Button
             size="lg"
-            className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
+            className="bg-[#ffd600] hover:bg-[#ffd600] text-gray-900 font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
             asChild
           >
             <Link href="/diagnostico">Quero Meu Diagnóstico Gratuito</Link>

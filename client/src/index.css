@@ -179,18 +179,25 @@
   }
 }
 
-/* Cores personalizadas do tema AEDA */
+/* Cores personalizadas do tema AEDA - Paleta Oficial */
 :root {
-  /* Sobrescrever cores primárias para roxo */
-  --primary: oklch(0.55 0.25 280) !important; /* Purple 600 */
-  --primary-foreground: oklch(0.985 0 0) !important; /* White */
+  /* Roxo principal da marca #5b3cc4 */
+  --primary: #5b3cc4 !important;
+  --primary-foreground: #ffffff !important;
   
-  /* Cores de acento para amarelo */
-  --accent: oklch(0.85 0.15 90) !important; /* Yellow 400 */
-  --accent-foreground: oklch(0.2 0.01 280) !important; /* Dark gray */
+  /* Amarelo da marca #ffd600 */
+  --accent: #ffd600 !important;
+  --accent-foreground: #000000 !important;
+  
+  /* Cores adicionais da marca */
+  --brand-purple: #5b3cc4;
+  --brand-yellow: #ffd600;
+  --brand-black: #000000;
+  --brand-white: #ffffff;
+  --brand-gray: #a6a6a6;
   
   /* Anel de foco roxo */
-  --ring: oklch(0.55 0.25 280) !important; /* Purple 600 */
+  --ring: #5b3cc4 !important;
 }
 
 

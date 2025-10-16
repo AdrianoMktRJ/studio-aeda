@@ -45,8 +45,8 @@ export default function Header() {
                 <button
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     location === item.path
-                      ? "text-purple-600 bg-purple-50"
-                      : "text-gray-700 hover:text-purple-600 hover:bg-gray-50"
+                      ? "text-[#5b3cc4] bg-purple-50"
+                      : "text-gray-700 hover:text-[#5b3cc4] hover:bg-gray-50"
                   }`}
                 >
                   {item.label}
@@ -70,7 +70,7 @@ export default function Header() {
                     <button
                       key={lang.code}
                       className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-50 transition-colors ${
-                        lang.active ? "text-purple-600 font-medium" : "text-gray-700"
+                        lang.active ? "text-[#5b3cc4] font-medium" : "text-gray-700"
                       }`}
                       onClick={() => setLanguageMenuOpen(false)}
                     >
@@ -82,7 +82,7 @@ export default function Header() {
             </div>
 
             <Button 
-              className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-8 py-6 rounded-lg shadow-md transition-all"
+              className="bg-[#ffd600] hover:bg-[#ffd600] text-gray-900 font-semibold px-8 py-6 rounded-lg shadow-md transition-all"
               asChild
             >
               <Link href="/diagnostico">Diagnóstico Gratuito</Link>
@@ -107,7 +107,7 @@ export default function Header() {
                   <button
                     className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${
                       location === item.path
-                        ? "text-purple-600 bg-purple-50"
+                        ? "text-[#5b3cc4] bg-purple-50"
                         : "text-gray-700 hover:bg-gray-50"
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
@@ -123,7 +123,7 @@ export default function Header() {
                     key={lang.code}
                     className={`px-3 py-1 rounded text-sm ${
                       lang.active
-                        ? "bg-purple-600 text-white"
+                        ? "bg-[#5b3cc4] text-white"
                         : "bg-gray-100 text-gray-700"
                     }`}
                   >
@@ -133,7 +133,7 @@ export default function Header() {
               </div>
 
               <Button 
-                className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold mx-4 mt-2 py-6"
+                className="bg-[#ffd600] hover:bg-[#ffd600] text-gray-900 font-semibold mx-4 mt-2 py-6"
                 asChild
               >
                 <Link href="/diagnostico">Diagnóstico Gratuito</Link>

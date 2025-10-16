@@ -10,9 +10,9 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: Instagram, label: "Instagram", href: "#" },
-    { icon: Linkedin, label: "LinkedIn", href: "#" },
-    { icon: Facebook, label: "Facebook", href: "#" },
+    { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/studioaedadigital/" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/studio-aeda-digital" },
+    { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/profile.php?id=61578330103145" },
   ];
 
   return (
@@ -41,6 +41,8 @@ export default function Footer() {
                 <a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={social.label}
                   className="w-10 h-10 rounded-lg bg-gray-800 hover:bg-[#5b3cc4] flex items-center justify-center transition-colors"
                 >

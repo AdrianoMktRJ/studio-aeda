@@ -193,3 +193,19 @@
   --ring: oklch(0.55 0.25 280) !important; /* Purple 600 */
 }
 
+
+
+/* Animação suave de bounce vertical para o logo */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
+}
+

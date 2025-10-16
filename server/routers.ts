@@ -64,6 +64,19 @@ export const appRouter = router({
           content: message,
         });
 
+        // Enviar mensagem para WhatsApp
+        const whatsappMessage = `🔔 *Novo Diagnóstico Solicitado*\n\n` +
+          `👤 Nome: ${input.name}\n` +
+          `📧 Email: ${input.email}\n` +
+          `📱 Telefone: ${input.phone}\n` +
+          `🏭 Empresa: ${input.company}\n` +
+          `👥 Funcionários: ${input.employees}\n` +
+          `🎯 Desafio: ${input.challenge}`;
+        
+        // Enviar para WhatsApp (usando API do WhatsApp Business ou serviço de terceiros)
+        // Por enquanto, a notificação do Manus já está funcionando
+        // Para integração real com WhatsApp, você precisará de uma API como Twilio, Evolution API, etc.
+
         return { success: true, id };
       }),
 
@@ -104,6 +117,17 @@ export const appRouter = router({
           title: "💬 Novo Contato - Studio AEDA",
           content: message,
         });
+
+        // Enviar mensagem para WhatsApp
+        const whatsappMessage = `🔔 *Novo Contato Recebido*\n\n` +
+          `👤 Nome: ${input.name}\n` +
+          `📧 Email: ${input.email}\n` +
+          `${input.phone ? `📱 Telefone: ${input.phone}\n` : ""}` +
+          `📝 Mensagem: ${input.message}`;
+        
+        // Enviar para WhatsApp (usando API do WhatsApp Business ou serviço de terceiros)
+        // Por enquanto, a notificação do Manus já está funcionando
+        // Para integração real com WhatsApp, você precisará de uma API como Twilio, Evolution API, etc.
 
         return { success: true, id };
       }),

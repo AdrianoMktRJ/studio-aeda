@@ -134,16 +134,11 @@ export default function Sobre() {
 
             {/* Imagem da Coruja */}
             <div className="flex items-center justify-center">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-blue-400 rounded-3xl blur-2xl opacity-20"></div>
-                <div className="relative bg-blue-100 rounded-3xl p-12 border-2 border-blue-200">
-                  <img 
-                    src="/owl-aeda.png" 
-                    alt="Coruja AEDA" 
-                    className="w-80 h-80 object-contain"
-                  />
-                </div>
-              </div>
+              <img 
+                src="/owl-aeda.png" 
+                alt="Coruja AEDA" 
+                className="w-80 h-80 object-contain"
+              />
             </div>
           </div>
         </div>

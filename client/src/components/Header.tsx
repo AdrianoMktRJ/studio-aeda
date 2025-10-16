@@ -27,12 +27,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center gap-3 cursor-pointer">
-              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center p-1 transition-transform hover:scale-110 hover:rotate-3 duration-300">
-                <img src="/owl-aeda.png" alt="AEDA Logo" className="w-full h-full object-contain animate-pulse" />
+            <div className="flex items-center gap-3 cursor-pointer group">
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center p-1 transition-transform group-hover:scale-105 duration-200">
+                <img src="/owl-aeda.png" alt="AEDA Logo" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-gray-900">Studio AEDA</span>
+                <span className="text-xl font-bold text-gray-900">Studio AEDA Digital</span>
                 <span className="text-xs text-gray-600">Gestão inteligente com IA</span>
               </div>
             </div>

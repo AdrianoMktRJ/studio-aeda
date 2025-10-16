@@ -22,11 +22,11 @@ export default function Footer() {
           {/* Logo e Descrição */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center p-1">
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center p-1">
                 <img src="/owl-aeda.png" alt="AEDA Logo" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col">
-                <span className="text-lg font-bold">Studio AEDA</span>
+                <span className="text-lg font-bold">Studio AEDA Digital</span>
                 <span className="text-xs text-gray-400">Intelligent management with AI</span>
               </div>
             </div>

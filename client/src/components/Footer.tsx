@@ -102,7 +102,12 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
-          © 2025 Studio AEDA Digital. Todos os direitos reservados.
+          <p>© 2025 Studio AEDA Digital. Todos os direitos reservados.</p>
+          <Link href="/privacidade">
+            <button className="text-gray-400 hover:text-white transition-colors mt-2">
+              Política de Privacidade e LGPD
+            </button>
+          </Link>
         </div>
       </div>
     </footer>

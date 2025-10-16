@@ -170,3 +170,26 @@
     }
   }
 }
+
+/* Custom styles for AEDA Digital */
+@layer components {
+  /* Aumentar padding dos botões CTA */
+  .btn-cta {
+    @apply px-10 py-6;
+  }
+}
+
+/* Cores personalizadas do tema AEDA */
+:root {
+  /* Sobrescrever cores primárias para roxo */
+  --primary: oklch(0.55 0.25 280) !important; /* Purple 600 */
+  --primary-foreground: oklch(0.985 0 0) !important; /* White */
+  
+  /* Cores de acento para amarelo */
+  --accent: oklch(0.85 0.15 90) !important; /* Yellow 400 */
+  --accent-foreground: oklch(0.2 0.01 280) !important; /* Dark gray */
+  
+  /* Anel de foco roxo */
+  --ring: oklch(0.55 0.25 280) !important; /* Purple 600 */
+}
+

@@ -10,27 +10,27 @@ export default function Sobre() {
     {
       icon: Lightbulb,
       title: "Inovação",
-      description: "Buscamos sempre as melhores e mais atuais soluções tecnológicas",
+      description: "Buscamos sempre as melhores e mais atuais soluções&nbsp;tecnológicas",
     },
     {
       icon: Eye,
       title: "Clareza",
-      description: "Comunicação transparente e resultados compreensíveis",
+      description: "Comunicação transparente e resultados&nbsp;compreensíveis",
     },
     {
       icon: Users,
       title: "Personalização",
-      description: "Cada solução é única, desenhada para suas necessidades específicas",
+      description: "Cada solução é única, desenhada para suas necessidades&nbsp;específicas",
     },
     {
       icon: Zap,
       title: "Produtividade",
-      description: "Foco em otimizar processos e maximizar eficiência",
+      description: "Foco em otimizar processos e maximizar&nbsp;eficiência",
     },
     {
       icon: TrendingUp,
       title: "Crescimento",
-      description: "Comprometidos com o sucesso e expansão dos nossos clientes",
+      description: "Comprometidos com o sucesso e expansão dos nossos&nbsp;clientes",
     },
   ];
 

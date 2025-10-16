@@ -57,17 +57,17 @@ export default function Diagnostico() {
     {
       icon: CheckCircle,
       title: "Análise Gratuita",
-      description: "Avaliação completa dos seus processos sem nenhum custo",
+      description: "Avaliação completa dos seus processos sem nenhum&nbsp;custo",
     },
     {
       icon: Zap,
       title: "Identificação de Oportunidades",
-      description: "3 pontos específicos de automação para reduzir custos",
+      description: "3 pontos específicos de automação para reduzir&nbsp;custos",
     },
     {
       icon: Target,
       title: "Plano de Ação",
-      description: "Roadmap personalizado para implementação de IA",
+      description: "Roadmap personalizado para implementação de&nbsp;IA",
     },
   ];
 
@@ -266,22 +266,22 @@ export default function Diagnostico() {
               {
                 step: "1",
                 title: "Você preenche o formulário",
-                description: "Conte-nos sobre seu negócio e seus desafios",
+                description: "Conte-nos sobre seu negócio e seus&nbsp;desafios",
               },
               {
                 step: "2",
                 title: "Agendamos uma conversa",
-                description: "Nossa equipe entra em contato em até 24 horas",
+                description: "Nossa equipe entra em contato em até 24&nbsp;horas",
               },
               {
                 step: "3",
                 title: "Análise dos processos",
-                description: "Avaliamos seus processos e identificamos oportunidades",
+                description: "Avaliamos seus processos e identificamos&nbsp;oportunidades",
               },
               {
                 step: "4",
                 title: "Recebe o diagnóstico",
-                description: "Apresentamos 3 pontos de automação e um plano de ação",
+                description: "Apresentamos 3 pontos de automação e um plano de&nbsp;ação",
               },
             ].map((phase, index) => (
               <div key={index} className="text-center">

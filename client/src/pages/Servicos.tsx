@@ -11,7 +11,7 @@ export default function Servicos() {
       icon: Bot,
       title: "Automação Inteligente",
       description:
-        "Automatize processos repetitivos e libere sua equipe para focar em tarefas estratégicas. Implementamos soluções de IA que aprendem e se adaptam ao seu negócio.",
+        "Automatize processos repetitivos e libere sua equipe para focar em tarefas&nbsp;estratégicas. Implementamos soluções de IA que aprendem e se adaptam ao seu&nbsp;negócio.",
       features: [
         "Chatbots e assistentes virtuais",
         "Automação de workflows",
@@ -23,7 +23,7 @@ export default function Servicos() {
       icon: BarChart3,
       title: "Análise de Dados e BI",
       description:
-        "Transforme dados brutos em insights acionáveis. Criamos dashboards inteligentes e relatórios que facilitam a tomada de decisão.",
+        "Transforme dados brutos em insights&nbsp;acionáveis. Criamos dashboards inteligentes e relatórios que facilitam a tomada de&nbsp;decisão.",
       features: [
         "Dashboards personalizados",
         "Análise preditiva",
@@ -35,7 +35,7 @@ export default function Servicos() {
       icon: Megaphone,
       title: "Marketing Digital com IA",
       description:
-        "Estratégias de tráfego pago otimizadas por inteligência artificial para maximizar seu ROI e atrair clientes qualificados.",
+        "Estratégias de tráfego pago otimizadas por inteligência artificial para maximizar seu ROI e atrair clientes&nbsp;qualificados.",
       features: [
         "Campanhas otimizadas por IA",
         "Segmentação inteligente",
@@ -47,7 +47,7 @@ export default function Servicos() {
       icon: Cog,
       title: "Consultoria em IA",
       description:
-        "Orientação estratégica para implementar IA no seu negócio de forma eficiente e sustentável. Identificamos oportunidades e traçamos o melhor caminho.",
+        "Orientação estratégica para implementar IA no seu negócio de forma eficiente e&nbsp;sustentável. Identificamos oportunidades e traçamos o melhor&nbsp;caminho.",
       features: [
         "Diagnóstico de processos",
         "Roadmap de implementação",
@@ -59,7 +59,7 @@ export default function Servicos() {
       icon: Lightbulb,
       title: "Desenvolvimento de Soluções Custom",
       description:
-        "Criamos soluções sob medida para desafios específicos do seu negócio. Do conceito à implementação, desenvolvemos ferramentas que realmente funcionam.",
+        "Criamos soluções sob medida para desafios específicos do seu&nbsp;negócio. Do conceito à implementação, desenvolvemos ferramentas que realmente&nbsp;funcionam.",
       features: [
         "Aplicações web e mobile",
         "Sistemas personalizados",
@@ -71,7 +71,7 @@ export default function Servicos() {
       icon: Users,
       title: "Treinamento e Capacitação",
       description:
-        "Capacite sua equipe para trabalhar com IA e ferramentas digitais. Oferecemos treinamentos práticos e acessíveis.",
+        "Capacite sua equipe para trabalhar com IA e ferramentas&nbsp;digitais. Oferecemos treinamentos práticos e&nbsp;acessíveis.",
       features: [
         "Workshops práticos",
         "Treinamento in-company",
@@ -135,22 +135,22 @@ export default function Servicos() {
               {
                 step: "01",
                 title: "Diagnóstico",
-                description: "Analisamos seus processos e identificamos oportunidades de melhoria",
+                description: "Analisamos seus processos e identificamos oportunidades de&nbsp;melhoria",
               },
               {
                 step: "02",
                 title: "Planejamento",
-                description: "Desenhamos a solução ideal sob medida para suas necessidades",
+                description: "Desenhamos a solução ideal sob medida para suas&nbsp;necessidades",
               },
               {
                 step: "03",
                 title: "Implementação",
-                description: "Desenvolvemos e implantamos a solução com acompanhamento próximo",
+                description: "Desenvolvemos e implantamos a solução com acompanhamento&nbsp;próximo",
               },
               {
                 step: "04",
                 title: "Otimização",
-                description: "Monitoramos resultados e otimizamos continuamente",
+                description: "Monitoramos resultados e otimizamos&nbsp;continuamente",
               },
             ].map((phase, index) => (
               <div key={index} className="text-center">

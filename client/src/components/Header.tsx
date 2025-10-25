@@ -29,7 +29,7 @@ export default function Header() {
           <Link href="/">
             <div className="flex items-center gap-3 cursor-pointer group">
               <div className="w-12 h-12 rounded-lg flex items-center justify-center p-1 animate-bounce-slow">
-                <img src="/owl-aeda.png" alt="AEDA Logo" className="w-full h-full object-contain" />
+                <img src="/logo-aeda.png" alt="AEDA Logo" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col justify-center items-start">
                 <span className="text-xl font-bold text-black leading-none">Studio AEDA Digital</span>
@@ -45,8 +45,8 @@ export default function Header() {
                 <button
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     location === item.path
-                      ? "text-[#5b3cc4] bg-purple-50"
-                      : "text-gray-700 hover:text-[#5b3cc4] hover:bg-gray-50"
+                      ? "text-[#2D5F5D] bg-[#2D5F5D]/10"
+                      : "text-gray-700 hover:text-[#2D5F5D] hover:bg-gray-50"
                   }`}
                 >
                   {item.label}
@@ -70,7 +70,7 @@ export default function Header() {
                     <button
                       key={lang.code}
                       className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-50 transition-colors ${
-                        lang.active ? "text-[#5b3cc4] font-medium" : "text-gray-700"
+                        lang.active ? "text-[#2D5F5D] font-medium" : "text-gray-700"
                       }`}
                       onClick={() => setLanguageMenuOpen(false)}
                     >
@@ -82,7 +82,7 @@ export default function Header() {
             </div>
 
             <Button 
-              className="bg-[#ffd600] hover:bg-[#ffd600] text-gray-900 font-semibold px-8 py-6 rounded-lg shadow-md transition-all"
+              className="bg-[#D97706] hover:bg-[#b86105] text-white font-semibold px-8 py-6 rounded-lg shadow-md transition-all"
               asChild
             >
               <Link href="/diagnostico">Diagnóstico Gratuito</Link>
@@ -107,7 +107,7 @@ export default function Header() {
                   <button
                     className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-colors ${
                       location === item.path
-                        ? "text-[#5b3cc4] bg-purple-50"
+                        ? "text-[#2D5F5D] bg-[#2D5F5D]/10"
                         : "text-gray-700 hover:bg-gray-50"
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
@@ -123,7 +123,7 @@ export default function Header() {
                     key={lang.code}
                     className={`px-3 py-1 rounded text-sm ${
                       lang.active
-                        ? "bg-[#5b3cc4] text-white"
+                        ? "bg-[#2D5F5D] text-white"
                         : "bg-gray-100 text-gray-700"
                     }`}
                   >
@@ -133,7 +133,7 @@ export default function Header() {
               </div>
 
               <Button 
-                className="bg-[#ffd600] hover:bg-[#ffd600] text-gray-900 font-semibold mx-4 mt-2 py-6"
+                className="bg-[#D97706] hover:bg-[#b86105] text-white font-semibold mx-4 mt-2 py-6"
                 asChild
               >
                 <Link href="/diagnostico">Diagnóstico Gratuito</Link>

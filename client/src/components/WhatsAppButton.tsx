@@ -1,8 +1,21 @@
 import { MessageCircle } from "lucide-react";
+import { useProfile } from "@/contexts/ProfileContext";
 
 export default function WhatsAppButton() {
+  const { profile } = useProfile();
   const whatsappNumber = "5583993751326";
-  const message = "Olá! Gostaria de saber mais sobre os serviços do Studio AEDA Digital.";
+  
+  // Mensagem personalizada baseada no perfil
+  const getMessage = () => {
+    if (profile === "advogado") {
+      return "Olá! Sou advogado(a) e gostaria de saber mais sobre as soluções de IA para escritórios de advocacia.";
+    } else if (profile === "construtora") {
+      return "Olá! Represento uma construtora e gostaria de saber mais sobre as soluções de IA para gestão de obras.";
+    }
+    return "Olá! Gostaria de saber mais sobre os serviços do Studio AEDA Digital.";
+  };
+
+  const message = getMessage();
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   return (

@@ -76,3 +76,10 @@
 - [x] Header usando logo correto
 - [x] Footer usando logo correto
 
+
+
+
+## 🐛 Correções
+- [x] Corrigir erro DialogTitle no ProfileSelector (acessibilidade)
+- [x] Remover animação do logo no Header
+

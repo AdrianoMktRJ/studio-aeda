@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useProfile } from "@/contexts/ProfileContext";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Scale, Building2, X } from "lucide-react";
 
 export default function ProfileSelector() {
@@ -30,6 +30,8 @@ export default function ProfileSelector() {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent className="sm:max-w-2xl p-0 overflow-hidden border-0">
+        <DialogTitle className="sr-only">Seletor de Perfil</DialogTitle>
+        
         {/* Botão de fechar */}
         <button
           onClick={handleClose}

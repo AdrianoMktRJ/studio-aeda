@@ -63,9 +63,16 @@
 - [x] Testar localStorage do perfil
 
 ## 🚀 Deploy
-- [ ] Fazer checkpoint após todas as mudanças
-- [ ] Testar localmente antes do deploy
+- [x] Fazer checkpoint após todas as mudanças
+- [x] Testar localmente antes do deploy
 - [ ] Fazer deploy para Vercel
 - [ ] Verificar cache do Vercel
 - [ ] Testar site em produção
+
+
+
+### Logo AEDA Adicionado
+- [x] Logo oficial AEDA (letra A) adicionado em client/public/logo-aeda.png
+- [x] Header usando logo correto
+- [x] Footer usando logo correto
 

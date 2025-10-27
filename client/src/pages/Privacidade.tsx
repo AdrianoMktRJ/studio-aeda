@@ -30,7 +30,7 @@ export default function Privacidade() {
             
             {/* Introdução */}
             <div className="mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-gray-900">Compromisso com a LGPD</h2>
+              <h2 className="text-3xl font-bold mb-4 text-[#1e3a8a]">Compromisso com a LGPD</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 O <strong>Studio AEDA Digital</strong> está comprometido com a proteção dos seus dados pessoais e 
                 com o cumprimento da <strong>Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)</strong>. 
@@ -48,7 +48,7 @@ export default function Privacidade() {
               <div className="border-l-4 border-[#5b3cc4] pl-6">
                 <div className="flex items-center gap-3 mb-4">
                   <FileText className="w-6 h-6 text-[#5b3cc4]" />
-                  <h3 className="text-2xl font-bold text-gray-900">1. Dados que Coletamos</h3>
+                  <h3 className="text-2xl font-bold text-[#1e3a8a]">1. Dados que Coletamos</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Coletamos apenas os dados necessários para prestar nossos serviços e melhorar sua experiência:
@@ -65,7 +65,7 @@ export default function Privacidade() {
               <div className="border-l-4 border-[#5b3cc4] pl-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Eye className="w-6 h-6 text-[#5b3cc4]" />
-                  <h3 className="text-2xl font-bold text-gray-900">2. Como Usamos Seus Dados</h3>
+                  <h3 className="text-2xl font-bold text-[#1e3a8a]">2. Como Usamos Seus Dados</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Utilizamos seus dados pessoais para as seguintes finalidades:
@@ -83,7 +83,7 @@ export default function Privacidade() {
               <div className="border-l-4 border-[#5b3cc4] pl-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Shield className="w-6 h-6 text-[#5b3cc4]" />
-                  <h3 className="text-2xl font-bold text-gray-900">3. Base Legal para Tratamento</h3>
+                  <h3 className="text-2xl font-bold text-[#1e3a8a]">3. Base Legal para Tratamento</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   O tratamento dos seus dados pessoais está fundamentado nas seguintes bases legais da LGPD:
@@ -100,7 +100,7 @@ export default function Privacidade() {
               <div className="border-l-4 border-[#5b3cc4] pl-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Lock className="w-6 h-6 text-[#5b3cc4]" />
-                  <h3 className="text-2xl font-bold text-gray-900">4. Compartilhamento de Dados</h3>
+                  <h3 className="text-2xl font-bold text-[#1e3a8a]">4. Compartilhamento de Dados</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Não vendemos, alugamos ou compartilhamos seus dados pessoais com terceiros para fins comerciais. 
@@ -117,7 +117,7 @@ export default function Privacidade() {
               <div className="border-l-4 border-[#5b3cc4] pl-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Lock className="w-6 h-6 text-[#5b3cc4]" />
-                  <h3 className="text-2xl font-bold text-gray-900">5. Segurança dos Dados</h3>
+                  <h3 className="text-2xl font-bold text-[#1e3a8a]">5. Segurança dos Dados</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Implementamos medidas técnicas e organizacionais adequadas para proteger seus dados contra 
@@ -135,7 +135,7 @@ export default function Privacidade() {
               <div className="border-l-4 border-[#ffd600] pl-6 bg-yellow-50 p-6 rounded-r-lg">
                 <div className="flex items-center gap-3 mb-4">
                   <AlertCircle className="w-6 h-6 text-[#5b3cc4]" />
-                  <h3 className="text-2xl font-bold text-gray-900">6. Seus Direitos (LGPD)</h3>
+                  <h3 className="text-2xl font-bold text-[#1e3a8a]">6. Seus Direitos (LGPD)</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   De acordo com a LGPD, você tem os seguintes direitos sobre seus dados pessoais:
@@ -154,7 +154,7 @@ export default function Privacidade() {
               <div className="border-l-4 border-[#5b3cc4] pl-6">
                 <div className="flex items-center gap-3 mb-4">
                   <FileText className="w-6 h-6 text-[#5b3cc4]" />
-                  <h3 className="text-2xl font-bold text-gray-900">7. Tempo de Retenção</h3>
+                  <h3 className="text-2xl font-bold text-[#1e3a8a]">7. Tempo de Retenção</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
                   Mantemos seus dados pessoais apenas pelo tempo necessário para cumprir as finalidades para as quais 
@@ -167,7 +167,7 @@ export default function Privacidade() {
               <div className="border-l-4 border-[#5b3cc4] pl-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Eye className="w-6 h-6 text-[#5b3cc4]" />
-                  <h3 className="text-2xl font-bold text-gray-900">8. Cookies e Tecnologias</h3>
+                  <h3 className="text-2xl font-bold text-[#1e3a8a]">8. Cookies e Tecnologias</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
                   Utilizamos cookies e tecnologias similares para melhorar sua experiência de navegação, 
@@ -180,14 +180,14 @@ export default function Privacidade() {
               <div className="border-l-4 border-[#5b3cc4] pl-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Mail className="w-6 h-6 text-[#5b3cc4]" />
-                  <h3 className="text-2xl font-bold text-gray-900">9. Encarregado de Dados (DPO)</h3>
+                  <h3 className="text-2xl font-bold text-[#1e3a8a]">9. Encarregado de Dados (DPO)</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Para exercer seus direitos ou esclarecer dúvidas sobre esta Política de Privacidade e 
                   o tratamento dos seus dados pessoais, entre em contato com nosso Encarregado de Proteção de Dados:
                 </p>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-gray-900 font-semibold mb-2">Studio AEDA Digital</p>
+                  <p className="text-[#1e3a8a] font-semibold mb-2">Studio AEDA Digital</p>
                   <p className="text-gray-600">E-mail: <a href="mailto:s.aedadigital@gmail.com" className="text-[#5b3cc4] hover:underline">s.aedadigital@gmail.com</a></p>
                   <p className="text-gray-600">WhatsApp: <a href="https://wa.me/5583993751326" className="text-[#5b3cc4] hover:underline">+55 (83) 99375-1326</a></p>
                 </div>
@@ -197,7 +197,7 @@ export default function Privacidade() {
               <div className="border-l-4 border-[#5b3cc4] pl-6">
                 <div className="flex items-center gap-3 mb-4">
                   <AlertCircle className="w-6 h-6 text-[#5b3cc4]" />
-                  <h3 className="text-2xl font-bold text-gray-900">10. Alterações na Política</h3>
+                  <h3 className="text-2xl font-bold text-[#1e3a8a]">10. Alterações na Política</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
                   Podemos atualizar esta Política de Privacidade periodicamente para refletir mudanças em nossas 
@@ -216,7 +216,7 @@ export default function Privacidade() {
               </p>
               <a
                 href="/contato"
-                className="inline-block bg-[#ffd600] hover:bg-[#ffd600] text-gray-900 font-semibold px-8 py-4 rounded-lg shadow-lg transition-all"
+                className="inline-block bg-[#ffd600] hover:bg-[#ffd600] text-[#1e3a8a] font-semibold px-8 py-4 rounded-lg shadow-lg transition-all"
               >
                 Entre em Contato
               </a>

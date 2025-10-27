@@ -60,7 +60,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section com cores da marca AEDA */}
-      <section className="relative bg-gradient-to-br from-[#2D5F5D] via-[#2D5F5D] to-[#1e4442] text-white pt-32 pb-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#1e3a8a] via-[#1e3a8a] to-[#1e4442] text-white pt-32 pb-20 overflow-hidden">
         {/* Elementos visuais de IA - linhas e formas sutis */}
         <div className="absolute inset-0 opacity-20">
           <svg className="absolute top-20 right-10 w-96 h-96" viewBox="0 0 400 400">
@@ -69,20 +69,20 @@ export default function Home() {
               stroke="currentColor"
               strokeWidth="3"
               fill="none"
-              className="text-[#D97706]"
+              className="text-[#f97316]"
             />
             <path
               d="M 100 250 Q 200 150 300 250 T 500 250"
               stroke="currentColor"
               strokeWidth="2"
               fill="none"
-              className="text-[#D97706]"
+              className="text-[#f97316]"
             />
           </svg>
           
           {/* Círculos decorativos */}
-          <div className="absolute top-40 right-32 w-32 h-32 rounded-full border-2 border-[#D97706]"></div>
-          <div className="absolute top-60 right-20 w-20 h-20 rounded-full border-2 border-[#D97706]"></div>
+          <div className="absolute top-40 right-32 w-32 h-32 rounded-full border-2 border-[#f97316]"></div>
+          <div className="absolute top-60 right-20 w-20 h-20 rounded-full border-2 border-[#f97316]"></div>
           
           {/* Padrão de grade sutil */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
@@ -100,7 +100,7 @@ export default function Home() {
             
             <Button
               size="lg"
-              className="bg-[#D97706] hover:bg-[#b86105] text-white font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
+              className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
               asChild
             >
               <Link href="/diagnostico">
@@ -118,7 +118,7 @@ export default function Home() {
       {/* Resultados que Geramos com IA */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
+          <h2 className="text-4xl font-bold text-center mb-16 text-[#1e3a8a]">
             O que você ganha trabalhando com IA
           </h2>
           
@@ -128,10 +128,10 @@ export default function Home() {
                 key={index}
                 className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="w-12 h-12 bg-[#2D5F5D]/10 rounded-lg flex items-center justify-center mb-4">
-                  <result.icon className="w-6 h-6 text-[#2D5F5D]" />
+                <div className="w-12 h-12 bg-[#1e3a8a]/10 rounded-lg flex items-center justify-center mb-4">
+                  <result.icon className="w-6 h-6 text-[#1e3a8a]" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">{result.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-[#1e3a8a]">{result.title}</h3>
                 <p className="text-gray-600">{result.description}</p>
               </div>
             ))}
@@ -142,17 +142,17 @@ export default function Home() {
       {/* Nosso Compromisso */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
+          <h2 className="text-4xl font-bold text-center mb-16 text-[#1e3a8a]">
             Nosso Compromisso com Seus Resultados
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {commitments.map((commitment, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-[#D97706]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <commitment.icon className="w-8 h-8 text-[#D97706]" />
+                <div className="w-16 h-16 bg-[#f97316]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <commitment.icon className="w-8 h-8 text-[#f97316]" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-3 text-gray-900">{commitment.title}</h3>
+                <h3 className="text-2xl font-semibold mb-3 text-[#1e3a8a]">{commitment.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{commitment.description}</p>
               </div>
             ))}
@@ -161,7 +161,7 @@ export default function Home() {
       </section>
 
       {/* CTA Final */}
-      <section className="bg-gradient-to-br from-[#2D5F5D] to-[#1e4442] text-white py-20">
+      <section className="bg-gradient-to-br from-[#1e3a8a] to-[#1e4442] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-8">
             Vamos descobrir juntos o potencial da IA no seu negócio?
@@ -169,7 +169,7 @@ export default function Home() {
           
           <Button
             size="lg"
-            className="bg-[#D97706] hover:bg-[#b86105] text-white font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
+            className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
             asChild
           >
             <Link href="/diagnostico">Quero Meu Diagnóstico Gratuito</Link>

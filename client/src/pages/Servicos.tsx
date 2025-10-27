@@ -62,10 +62,10 @@ export default function Servicos() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#2D5F5D] to-[#1e4644] text-white pt-32 pb-20">
+      <section className="bg-gradient-to-br from-[#1e3a8a] to-[#0f2847] text-white pt-32 pb-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Nossos Serviços</h1>
-          <p className="text-xl max-w-3xl mx-auto text-teal-100">
+          <p className="text-xl max-w-3xl mx-auto text-blue-100">
             Soluções completas de IA e automação para transformar seu negócio e impulsionar resultados
           </p>
         </div>
@@ -80,17 +80,17 @@ export default function Servicos() {
                 key={index}
                 className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow border border-gray-100"
               >
-                <div className="w-14 h-14 bg-teal-50 rounded-lg flex items-center justify-center mb-4">
-                  <service.icon className="w-7 h-7 text-[#2D5F5D]" />
+                <div className="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                  <service.icon className="w-7 h-7 text-[#1e3a8a]" />
                 </div>
                 
-                <h3 className="text-2xl font-semibold mb-3 text-gray-900">{service.title}</h3>
+                <h3 className="text-2xl font-semibold mb-3 text-[#1e3a8a]">{service.title}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
                 
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-gray-700">
-                      <span className="text-[#D97706] mt-1">✓</span>
+                      <span className="text-[#f97316] mt-1">✓</span>
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -102,9 +102,9 @@ export default function Servicos() {
       </section>
 
       {/* Como Trabalhamos */}
-      <section className="py-20 bg-gradient-to-br from-teal-50 to-orange-50">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-orange-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">Como Trabalhamos</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 text-[#1e3a8a]">Como Trabalhamos</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {[
@@ -130,10 +130,10 @@ export default function Servicos() {
               },
             ].map((phase, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-[#2D5F5D] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="w-16 h-16 bg-[#1e3a8a] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   {phase.step}
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">{phase.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-[#1e3a8a]">{phase.title}</h3>
                 <p className="text-gray-600">{phase.description}</p>
               </div>
             ))}
@@ -142,18 +142,18 @@ export default function Servicos() {
       </section>
 
       {/* CTA Final */}
-      <section className="bg-gradient-to-br from-[#2D5F5D] to-[#1e4644] text-white py-20">
+      <section className="bg-gradient-to-br from-[#1e3a8a] to-[#0f2847] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Pronto para transformar seu negócio com IA?
           </h2>
-          <p className="text-xl mb-8 text-teal-100 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
             Agende um diagnóstico gratuito e descubra como podemos ajudar sua empresa a crescer
           </p>
           
           <Button
             size="lg"
-            className="bg-[#D97706] hover:bg-[#b45309] text-white font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
+            className="bg-[#f97316] hover:bg-[#b45309] text-white font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
             asChild
           >
             <Link href="/diagnostico">Agendar Diagnóstico Gratuito</Link>

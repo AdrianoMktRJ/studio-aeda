@@ -55,7 +55,7 @@ export default function ProfileSelector() {
             {/* Card Advogado */}
             <button
               onClick={() => handleSelectProfile("advogado")}
-              className="group relative bg-gradient-to-br from-[#2D5F5D] to-[#1e4442] text-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="group relative bg-gradient-to-br from-[#1e3a8a] to-[#1e4442] text-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-white/30 transition-colors">
@@ -73,7 +73,7 @@ export default function ProfileSelector() {
             {/* Card Construtora */}
             <button
               onClick={() => handleSelectProfile("construtora")}
-              className="group relative bg-gradient-to-br from-[#D97706] to-[#b86105] text-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="group relative bg-gradient-to-br from-[#f97316] to-[#b86105] text-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-white/30 transition-colors">

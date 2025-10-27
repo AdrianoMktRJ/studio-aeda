@@ -96,3 +96,23 @@
 - [x] Outras páginas (Sobre, Serviços, Contato) ainda estão roxas
 - [x] Seletor de perfil não tem opção de voltar a escolher depois de selecionar
 
+
+
+
+## 🎨 Mudança de Paleta de Cores
+- [x] Substituir Verde Petrol (#2D5F5D) por Azul Escuro (#1e3a8a)
+- [x] Manter Laranja (#f97316) como secundária
+- [x] Adicionar Cinza (#64748b) como neutra
+- [x] Atualizar todas as páginas com nova paleta
+- [ ] Testar no site em produção
+
+
+
+
+## 🎨 Logo com Novas Cores
+- [x] Recolorir logo de Verde Petrol + Laranja para Azul Escuro + Laranja
+
+
+
+- [ ] Mudar "Studio AEDA Digital" para azul escuro (#1e3a8a) em todo o site
+

@@ -113,7 +113,7 @@ export default function DiagnosticoDetalhado() {
                 
                 {/* Dados Básicos */}
                 <Card className="p-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <h2 className="text-2xl font-bold text-[#1e3a8a] mb-6 flex items-center gap-3">
                     <Users className="w-7 h-7 text-[#5b3cc4]" />
                     Dados Básicos
                   </h2>
@@ -183,7 +183,7 @@ export default function DiagnosticoDetalhado() {
 
                 {/* Perfil dos Clientes */}
                 <Card className="p-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <h2 className="text-2xl font-bold text-[#1e3a8a] mb-6 flex items-center gap-3">
                     <Target className="w-7 h-7 text-[#5b3cc4]" />
                     Perfil dos Seus Clientes
                   </h2>
@@ -238,7 +238,7 @@ export default function DiagnosticoDetalhado() {
 
                 {/* Canais de Comunicação */}
                 <Card className="p-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <h2 className="text-2xl font-bold text-[#1e3a8a] mb-6 flex items-center gap-3">
                     <Globe className="w-7 h-7 text-[#5b3cc4]" />
                     Seus Canais de Comunicação
                   </h2>
@@ -326,7 +326,7 @@ export default function DiagnosticoDetalhado() {
 
                 {/* Processos Internos */}
                 <Card className="p-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <h2 className="text-2xl font-bold text-[#1e3a8a] mb-6 flex items-center gap-3">
                     <TrendingUp className="w-7 h-7 text-[#5b3cc4]" />
                     Processos e Operação
                   </h2>
@@ -366,7 +366,7 @@ export default function DiagnosticoDetalhado() {
 
                 {/* Objetivos */}
                 <Card className="p-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  <h2 className="text-2xl font-bold text-[#1e3a8a] mb-6">
                     Objetivos de Crescimento
                   </h2>
                   

@@ -26,7 +26,7 @@ export default function Footer() {
                 <img src="/logo-aeda.png" alt="AEDA Logo" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col justify-center items-start">
-                <span className="text-lg font-bold leading-none">Studio AEDA Digital</span>
+                <span className="text-lg font-bold text-[#1e3a8a] leading-none">Studio AEDA Digital</span>
                 <span className="text-xs text-gray-400 leading-none mt-1">Intelligent management with AI</span>
               </div>
             </div>
@@ -44,7 +44,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-10 h-10 rounded-lg bg-gray-800 hover:bg-[#2D5F5D] flex items-center justify-center transition-colors"
+                  className="w-10 h-10 rounded-lg bg-gray-800 hover:bg-[#1e3a8a] flex items-center justify-center transition-colors"
                 >
                   <social.icon className="w-5 h-5" />
                 </a>

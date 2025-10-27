@@ -93,7 +93,7 @@ export default function Diagnostico() {
       {/* O que você recebe */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
+          <h2 className="text-4xl font-bold text-center mb-16 text-[#1e3a8a]">
             O que você recebe no diagnóstico
           </h2>
           
@@ -106,7 +106,7 @@ export default function Diagnostico() {
                 <div className="w-16 h-16 bg-[#5b3cc4] rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">{benefit.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-[#1e3a8a]">{benefit.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
               </div>
             ))}
@@ -119,7 +119,7 @@ export default function Diagnostico() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-              <h2 className="text-3xl font-bold mb-4 text-gray-900 text-center">
+              <h2 className="text-3xl font-bold mb-4 text-[#1e3a8a] text-center">
                 Solicite seu Diagnóstico Gratuito
               </h2>
               <p className="text-gray-600 mb-8 text-center">
@@ -259,7 +259,7 @@ export default function Diagnostico() {
       {/* Como funciona */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
+          <h2 className="text-4xl font-bold text-center mb-16 text-[#1e3a8a]">
             Como funciona o diagnóstico
           </h2>
           
@@ -290,7 +290,7 @@ export default function Diagnostico() {
                 <div className="w-16 h-16 bg-gradient-to-br from-[#5b3cc4] to-[#4a2ea3] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg">
                   {phase.step}
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-gray-900">{phase.title}</h3>
+                <h3 className="text-lg font-semibold mb-2 text-[#1e3a8a]">{phase.title}</h3>
                 <p className="text-gray-600 text-sm">{phase.description}</p>
               </div>
             ))}

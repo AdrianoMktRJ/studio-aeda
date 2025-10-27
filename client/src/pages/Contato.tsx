@@ -81,10 +81,10 @@ export default function Contato() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#2D5F5D] to-[#1e4644] text-white pt-32 pb-20">
+      <section className="bg-gradient-to-br from-[#1e3a8a] to-[#0f2847] text-white pt-32 pb-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Entre em Contato</h1>
-          <p className="text-xl max-w-3xl mx-auto text-teal-100">
+          <p className="text-xl max-w-3xl mx-auto text-blue-100">
             Estamos prontos para ajudar sua empresa a crescer com inteligência artificial
           </p>
         </div>
@@ -96,7 +96,7 @@ export default function Contato() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Formulário */}
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-gray-900">
+              <h2 className="text-3xl font-bold mb-6 text-[#1e3a8a]">
                 Solicite seu Diagnóstico Gratuito
               </h2>
               <p className="text-gray-600 mb-8">
@@ -174,7 +174,7 @@ export default function Contato() {
                   type="submit"
                   size="lg"
                   disabled={submitMutation.isPending}
-                  className="w-full bg-[#2D5F5D] hover:bg-[#2D5F5D] text-white font-semibold py-6 text-lg rounded-lg shadow-md transition-all"
+                  className="w-full bg-[#1e3a8a] hover:bg-[#1e3a8a] text-white font-semibold py-6 text-lg rounded-lg shadow-md transition-all"
                 >
                   {submitMutation.isPending ? (
                     <>
@@ -190,7 +190,7 @@ export default function Contato() {
 
             {/* Informações de Contato */}
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-gray-900">
+              <h2 className="text-3xl font-bold mb-6 text-[#1e3a8a]">
                 Outras Formas de Contato
               </h2>
               <p className="text-gray-600 mb-8">
@@ -204,17 +204,17 @@ export default function Contato() {
                     className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow"
                   >
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <info.icon className="w-6 h-6 text-[#2D5F5D]" />
+                      <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <info.icon className="w-6 h-6 text-[#1e3a8a]" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                        <h3 className="text-lg font-semibold text-[#1e3a8a] mb-1">
                           {info.title}
                         </h3>
                         {info.link ? (
                           <a
                             href={info.link}
-                            className="text-[#2D5F5D] hover:text-[#2D5F5D] transition-colors"
+                            className="text-[#1e3a8a] hover:text-[#1e3a8a] transition-colors"
                             target="_blank"
                             rel="noopener noreferrer"
                           >

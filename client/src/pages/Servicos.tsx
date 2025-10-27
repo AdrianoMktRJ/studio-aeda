@@ -156,7 +156,7 @@ export default function Servicos() {
             className="bg-[#f97316] hover:bg-[#b45309] text-white font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
             asChild
           >
-            <Link href="/diagnostico">Agendar Diagnóstico Gratuito</Link>
+            <Link href="/contato">Agendar Agendar Contato</Link>
           </Button>
         </div>
       </section>

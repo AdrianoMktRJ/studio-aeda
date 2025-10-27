@@ -119,7 +119,7 @@ export default function Home() {
               className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold px-8 py-6 rounded-lg shadow-md transition-all text-lg"
               asChild
             >
-              <Link href="/diagnostico">Diagnóstico Gratuito</Link>
+              <Link href="/contato">Agendar Contato</Link>
             </Button>
             <Button
               variant="outline"
@@ -209,7 +209,7 @@ export default function Home() {
                   }`}
                   asChild
                 >
-                  <Link href="/diagnostico">{service.cta}</Link>
+                  <Link href="/contato">{service.cta}</Link>
                 </Button>
               </div>
             ))}
@@ -255,8 +255,8 @@ export default function Home() {
             className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold px-12 py-6 rounded-lg shadow-md transition-all text-lg inline-flex items-center gap-2"
             asChild
           >
-            <Link href="/diagnostico">
-              Solicitar Diagnóstico Gratuito
+            <Link href="/contato">
+              Solicitar Agendar Contato
               <ArrowRight className="w-5 h-5" />
             </Link>
           </Button>

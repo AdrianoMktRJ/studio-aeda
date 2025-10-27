@@ -131,3 +131,13 @@
 - [ ] Adicionar meta descriptions em todas as páginas
 - [ ] Implementar banner LGPD/Cookies
 
+
+
+
+## 🔄 Mudança: Remover Diagnóstico Gratuito
+- [ ] Remover todas as referências a "Diagnóstico Gratuito"
+- [ ] Substituir por "Agendar Contato" em todos os CTAs
+- [ ] Reescrever Contato.tsx com formulário de agendamento
+- [ ] Atualizar Home.tsx com novo CTA
+- [ ] Atualizar Sobre.tsx com novo CTA
+

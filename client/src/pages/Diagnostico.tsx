@@ -81,7 +81,7 @@ export default function Diagnostico() {
       <section className="bg-gradient-to-br from-[#5b3cc4] to-[#4a2ea3] text-white pt-32 pb-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Diagnóstico Gratuito de IA
+            Agendar Contato de IA
           </h1>
           <p className="text-xl max-w-3xl mx-auto text-purple-100">
             Descubra como a inteligência artificial pode transformar seu negócio. 
@@ -120,7 +120,7 @@ export default function Diagnostico() {
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
               <h2 className="text-3xl font-bold mb-4 text-[#1e3a8a] text-center">
-                Solicite seu Diagnóstico Gratuito
+                Solicite seu Agendar Contato
               </h2>
               <p className="text-gray-600 mb-8 text-center">
                 Preencha o formulário abaixo e nossa equipe entrará em contato em até 24 horas
@@ -243,7 +243,7 @@ export default function Diagnostico() {
                       Enviando...
                     </>
                   ) : (
-                    "Solicitar Diagnóstico Gratuito"
+                    "Solicitar Agendar Contato"
                   )}
                 </Button>
 

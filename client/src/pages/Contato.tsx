@@ -1,262 +1,200 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, Clock, MapPin, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, ArrowRight } from "lucide-react";
 import { useState } from "react";
-import { trpc } from "@/lib/trpc";
-import { toast } from "sonner";
 
 export default function Contato() {
   const [formData, setFormData] = useState({
-    name: "",
+    nome: "",
     email: "",
-    phone: "",
-    message: "",
+    telefone: "",
+    empresa: "",
+    tipo: "construtora",
+    mensagem: "",
   });
 
-  const submitMutation = trpc.forms.submitContato.useMutation({
-    onSuccess: () => {
-      toast.success("Mensagem enviada com sucesso!", {
-        description: "Entraremos em contato em breve.",
-      });
-      // Limpar formulário
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
-    },
-    onError: (error) => {
-      toast.error("Erro ao enviar mensagem", {
-        description: error.message,
-      });
-    },
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    submitMutation.mutate(formData);
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    console.log("Formulário enviado:", formData);
+    alert("Obrigado! Entraremos em contato em breve.");
     setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+      nome: "",
+      email: "",
+      telefone: "",
+      empresa: "",
+      tipo: "construtora",
+      mensagem: "",
     });
   };
 
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: "E-mail",
-      content: "s.aedadigital@gmail.com",
-      link: "mailto:s.aedadigital@gmail.com",
-    },
-    {
-      icon: Phone,
-      title: "WhatsApp",
-      content: "+55 (83) 99375-1326",
-      link: "https://wa.me/5583993751326",
-    },
-    {
-      icon: Clock,
-      title: "Horário",
-      content: "Seg-Sex: 9h às 18h",
-      link: null,
-    },
-    {
-      icon: MapPin,
-      title: "Localização",
-      content: "João Pessoa, PB - Brasil",
-      link: null,
-    },
-  ];
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#1e3a8a] to-[#0f2847] text-white pt-32 pb-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Entre em Contato</h1>
-          <p className="text-xl max-w-3xl mx-auto text-blue-100">
-            Estamos prontos para ajudar sua empresa a crescer com inteligência artificial
+    <div className="min-h-screen bg-white">
+      {/* Hero */}
+      <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-[#1e3a8a] to-[#1e3a8a]/90">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Entre em Contato</h1>
+          <p className="text-xl md:text-2xl text-blue-100">
+            Vamos conversar sobre como podemos ajudar seu negócio a crescer com IA e automação.
           </p>
         </div>
       </section>
 
-      {/* Conteúdo Principal */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Formulário */}
-            <div>
-              <h2 className="text-3xl font-bold mb-6 text-[#1e3a8a]">
-                Solicite seu Diagnóstico Gratuito
-              </h2>
-              <p className="text-gray-600 mb-8">
-                Preencha o formulário abaixo e nossa equipe entrará em contato para agendar 
-                uma análise gratuita dos seus processos.
-              </p>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Nome completo *
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Seu nome"
-                    className="w-full"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    E-mail *
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="seu@email.com"
-                    className="w-full"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Telefone/WhatsApp *
-                  </label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    required
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder="(00) 00000-0000"
-                    className="w-full"
-                  />
-                </div>
-
-
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Mensagem *
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    required
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Descreva brevemente como podemos ajudar sua empresa a crescer com IA..."
-                    className="w-full min-h-[150px]"
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  size="lg"
-                  disabled={submitMutation.isPending}
-                  className="w-full bg-[#1e3a8a] hover:bg-[#1e3a8a] text-white font-semibold py-6 text-lg rounded-lg shadow-md transition-all"
-                >
-                  {submitMutation.isPending ? (
-                    <>
-                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                      Enviando...
-                    </>
-                  ) : (
-                    "Enviar Mensagem"
-                  )}
-                </Button>
-              </form>
+      {/* Informações de Contato */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="container mx-auto max-w-4xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg p-6 border border-gray-200">
+              <Mail className="w-12 h-12 text-[#f97316] mb-4" />
+              <h3 className="text-xl font-bold text-[#1e3a8a] mb-2">E-mail</h3>
+              <a href="mailto:s.aedadigital@gmail.com" className="text-gray-600 hover:text-[#f97316]">
+                s.aedadigital@gmail.com
+              </a>
             </div>
 
-            {/* Informações de Contato */}
-            <div>
-              <h2 className="text-3xl font-bold mb-6 text-[#1e3a8a]">
-                Outras Formas de Contato
-              </h2>
-              <p className="text-gray-600 mb-8">
-                Prefere falar diretamente conosco? Escolha a melhor forma de contato:
-              </p>
+            <div className="bg-white rounded-lg p-6 border border-gray-200">
+              <Phone className="w-12 h-12 text-[#f97316] mb-4" />
+              <h3 className="text-xl font-bold text-[#1e3a8a] mb-2">WhatsApp</h3>
+              <a href="https://wa.me/5583993751326" className="text-gray-600 hover:text-[#f97316]">
+                +55 (83) 99375-1326
+              </a>
+            </div>
 
-              <div className="space-y-6">
-                {contactInfo.map((info, index) => (
-                  <div
-                    key={index}
-                    className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <info.icon className="w-6 h-6 text-[#1e3a8a]" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-[#1e3a8a] mb-1">
-                          {info.title}
-                        </h3>
-                        {info.link ? (
-                          <a
-                            href={info.link}
-                            className="text-[#1e3a8a] hover:text-[#1e3a8a] transition-colors"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {info.content}
-                          </a>
-                        ) : (
-                          <p className="text-gray-600">{info.content}</p>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* CTA WhatsApp */}
-              <div className="mt-8 bg-gradient-to-br from-green-500 to-green-600 rounded-xl p-6 text-white">
-                <h3 className="text-xl font-semibold mb-2">Prefere WhatsApp?</h3>
-                <p className="mb-4 text-green-50">
-                  Fale diretamente com nossa equipe e tire suas dúvidas em tempo real.
-                </p>
-                <Button
-                  size="lg"
-                  className="w-full bg-white hover:bg-gray-100 text-green-600 font-semibold py-6"
-                  asChild
-                >
-                  <a
-                    href="https://wa.me/5583993751326"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Abrir WhatsApp
-                  </a>
-                </Button>
-              </div>
+            <div className="bg-white rounded-lg p-6 border border-gray-200">
+              <Clock className="w-12 h-12 text-[#f97316] mb-4" />
+              <h3 className="text-xl font-bold text-[#1e3a8a] mb-2">Horário</h3>
+              <p className="text-gray-600">Seg-Sex: 9h às 18h</p>
             </div>
           </div>
         </div>
       </section>
 
-      <Footer />
-      <WhatsAppButton />
+      {/* Formulário */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-2xl">
+          <h2 className="text-4xl font-bold text-[#1e3a8a] mb-12 text-center">Agende uma Conversa</h2>
+
+          <form onSubmit={handleSubmit} className="bg-white rounded-lg border border-gray-200 p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label className="block text-sm font-semibold text-[#1e3a8a] mb-2">Nome *</label>
+                <input
+                  type="text"
+                  name="nome"
+                  value={formData.nome}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#f97316]"
+                  placeholder="Seu nome"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-[#1e3a8a] mb-2">E-mail *</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#f97316]"
+                  placeholder="seu@email.com"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label className="block text-sm font-semibold text-[#1e3a8a] mb-2">Telefone *</label>
+                <input
+                  type="tel"
+                  name="telefone"
+                  value={formData.telefone}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#f97316]"
+                  placeholder="(83) 99999-9999"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-[#1e3a8a] mb-2">Empresa *</label>
+                <input
+                  type="text"
+                  name="empresa"
+                  value={formData.empresa}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#f97316]"
+                  placeholder="Nome da sua empresa"
+                />
+              </div>
+            </div>
+
+            <div className="mb-6">
+              <label className="block text-sm font-semibold text-[#1e3a8a] mb-2">Você é? *</label>
+              <select
+                name="tipo"
+                value={formData.tipo}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#f97316]"
+              >
+                <option value="construtora">Construtora</option>
+                <option value="advocacia">Escritório de Advocacia</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+
+            <div className="mb-8">
+              <label className="block text-sm font-semibold text-[#1e3a8a] mb-2">Mensagem</label>
+              <textarea
+                name="mensagem"
+                value={formData.mensagem}
+                onChange={handleChange}
+                rows={5}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#f97316]"
+                placeholder="Conte-nos um pouco sobre seu negócio e seus desafios..."
+              ></textarea>
+            </div>
+
+            <Button
+              type="submit"
+              className="w-full bg-[#f97316] hover:bg-[#b86105] text-white font-semibold py-6 rounded-lg transition-all text-lg inline-flex items-center justify-center gap-2"
+            >
+              Agendar Conversa
+              <ArrowRight className="w-5 h-5" />
+            </Button>
+          </form>
+
+          <p className="text-center text-gray-600 mt-6 text-sm">
+            * Campos obrigatórios. Responderemos em até 24 horas.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA Final */}
+      <section className="py-16 px-4 bg-[#1e3a8a] text-white">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl font-bold mb-6">Prefere falar por WhatsApp?</h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Clique no botão abaixo e converse diretamente com nosso time.
+          </p>
+          <Button
+            className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold px-12 py-6 rounded-lg shadow-md transition-all text-lg"
+            asChild
+          >
+            <a href="https://wa.me/5583993751326" target="_blank" rel="noopener noreferrer">
+              Abrir WhatsApp
+            </a>
+          </Button>
+        </div>
+      </section>
     </div>
   );
 }
-

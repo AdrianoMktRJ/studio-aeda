@@ -97,3 +97,26 @@
 | 7 - Formulários e CRM | ⏳ Pendente | 0% |
 | 8 - Prova Social | ⏳ Pendente | 0% |
 
+
+
+
+## 🔄 Correções Identificadas
+
+### Revisão de Textos - Remover Menções a Ferramentas
+- [x] Remover menção a "KanFlow" da página Construtoras
+- [x] Remover menção a "KanFlow" da página Advogados
+- [x] Remover menção a "N8N" de todas as páginas
+- [x] Focar em benefícios e resultados ao invés de ferramentas técnicas
+- [x] Manter linguagem voltada para o cliente final
+
+
+
+
+### Reescrita de Conteúdo com Novo Texto
+- [x] Reescrever página Advogados com novo conteúdo fornecido
+- [x] Reescrever página Construtoras com novo conteúdo fornecido
+- [x] Adicionar slogan "Tecnologia que liberta, inteligência que humaniza"
+- [x] Incluir Metodologia A.E.D.A. explicada para cada setor
+- [x] Reforçar garantia de 7 dias
+- [x] Ajustar formulários para captar informações relevantes
+

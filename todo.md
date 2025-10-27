@@ -114,5 +114,20 @@
 
 
 
-- [ ] Mudar "Studio AEDA Digital" para azul escuro (#1e3a8a) em todo o site
+- [x] Mudar "Studio AEDA Digital" para azul escuro (#1e3a8a) em todo o site
+
+
+
+
+## 🔄 Reescrita Completa do Site (Baseado em Documentos)
+- [x] Reescrever Home.tsx com novo conteúdo e estrutura
+- [ ] Reescrever Sobre.tsx com história alinhada
+- [ ] Reescrever Serviços.tsx com 3 produtos claros
+- [ ] Atualizar Contato.tsx com formulários segmentados
+- [ ] Adicionar seção de Benefícios
+- [ ] Adicionar seção de Método A.E.D.A.
+- [ ] Adicionar provas sociais (depoimentos/cases)
+- [ ] Implementar segmentação (Construtoras vs Advogados)
+- [ ] Adicionar meta descriptions em todas as páginas
+- [ ] Implementar banner LGPD/Cookies
 

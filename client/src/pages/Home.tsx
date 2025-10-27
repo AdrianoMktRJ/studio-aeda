@@ -1,184 +1,267 @@
-import { useAuth } from "@/_core/hooks/useAuth";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import { Zap, DollarSign, Target, TrendingUp, CheckCircle, Sparkles } from "lucide-react";
+import { CheckCircle, Zap, Target, TrendingUp, Users, Brain, ArrowRight } from "lucide-react";
+import ProfileSelector from "@/components/ProfileSelector";
 
 export default function Home() {
-  // The userAuth hooks provides authentication state
-  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
-  let { user, loading, error, isAuthenticated, logout } = useAuth();
+  const [showProfileSelector, setShowProfileSelector] = useState(false);
 
-  const results = [
+  useEffect(() => {
+    const hasSelectedProfile = localStorage.getItem("selectedProfile");
+    if (!hasSelectedProfile) {
+      const timer = setTimeout(() => setShowProfileSelector(true), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const benefits = [
     {
       icon: Zap,
-      title: "Aumente Sua Produtividade",
-      description: "Automatize tarefas repetitivas e foque no que realmente importa",
-    },
-    {
-      icon: DollarSign,
-      title: "Reduza Custos Operacionais",
-      description: "Otimize processos e elimine desperdícios com inteligência artificial",
-    },
-    {
-      icon: Target,
-      title: "Atraia Clientes Qualificados",
-      description: "Estratégias inteligentes de tráfego pago para máximo ROI",
+      title: "Automação Inteligente",
+      description: "Elimine tarefas repetitivas e libere tempo para decisões estratégicas",
     },
     {
       icon: TrendingUp,
-      title: "Tome Decisões Claras",
-      description: "Dados transformados em insights acionáveis para seu negócio",
+      title: "Aumento de Produtividade",
+      description: "Até 40% mais eficiência operacional em 30 dias",
+    },
+    {
+      icon: Brain,
+      title: "Inteligência Artificial",
+      description: "Tecnologia de ponta adaptada ao seu negócio",
     },
   ];
 
-  const commitments = [
+  const services = [
     {
-      icon: CheckCircle,
-      title: "Clareza Total",
-      description:
-        "Você sempre saberá o que está sendo feito e por quê. Nossos relatórios são feitos para serem compreendidos, não para confundir.",
+      title: "Mentoria IA na Prática",
+      price: "R$ 2.000 - R$ 2.500",
+      duration: "4 semanas",
+      description: "Aprenda a implementar IA no seu negócio com suporte personalizado",
+      features: [
+        "Sessões semanais 1:1",
+        "Diagnóstico inicial",
+        "Plano de ação customizado",
+        "Suporte por email",
+      ],
+      cta: "Começar Mentoria",
+      highlight: false,
     },
     {
-      icon: TrendingUp,
-      title: "Foco no ROI",
-      description:
-        "Nossa primeira pergunta sempre será sobre seu retorno de investimento. A tecnologia é o meio, seu lucro é o fim.",
+      title: "Consultoria AEDA Performance",
+      price: "R$ 3.500 - R$ 6.000",
+      duration: "4-6 semanas",
+      description: "Implementação completa de automação e IA no seu processo",
+      features: [
+        "Análise profunda do negócio",
+        "Implementação de automações",
+        "Treinamento da equipe",
+        "Suporte pós-implementação",
+      ],
+      cta: "Solicitar Consultoria",
+      highlight: true,
     },
     {
-      icon: Sparkles,
-      title: "Soluções, Não Pacotes",
-      description:
-        "Não vendemos pacotes prontos. Escutamos seu desafio e desenhamos a solução exata que você precisa, sob medida para seu crescimento.",
+      title: "Premium AEDA Evolution",
+      price: "R$ 8.000 - R$ 8.500",
+      duration: "6-8 semanas",
+      description: "Transformação digital completa com IA, automação e dados",
+      features: [
+        "Tudo da Consultoria +",
+        "Dashboard customizado",
+        "Análise de dados avançada",
+        "Suporte 3 meses",
+      ],
+      cta: "Transformar Negócio",
+      highlight: false,
+    },
+  ];
+
+  const aedaMethod = [
+    {
+      letter: "A",
+      title: "Análise",
+      description: "Entendemos profundamente seu negócio, processos e desafios",
+    },
+    {
+      letter: "E",
+      title: "Estratégia",
+      description: "Definimos a melhor estratégia de automação e IA para você",
+    },
+    {
+      letter: "D",
+      title: "Desenvolvimento",
+      description: "Implementamos soluções práticas e eficientes",
+    },
+    {
+      letter: "A",
+      title: "Acompanhamento",
+      description: "Garantimos resultados com suporte contínuo",
     },
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
+    <div className="min-h-screen bg-white">
+      {showProfileSelector && <ProfileSelector />}
 
-      {/* Hero Section com cores da marca AEDA */}
-      <section className="relative bg-gradient-to-br from-[#1e3a8a] via-[#1e3a8a] to-[#1e4442] text-white pt-32 pb-20 overflow-hidden">
-        {/* Elementos visuais de IA - linhas e formas sutis */}
-        <div className="absolute inset-0 opacity-20">
-          <svg className="absolute top-20 right-10 w-96 h-96" viewBox="0 0 400 400">
-            <path
-              d="M 50 200 Q 150 100 250 200 T 450 200"
-              stroke="currentColor"
-              strokeWidth="3"
-              fill="none"
-              className="text-[#f97316]"
-            />
-            <path
-              d="M 100 250 Q 200 150 300 250 T 500 250"
-              stroke="currentColor"
-              strokeWidth="2"
-              fill="none"
-              className="text-[#f97316]"
-            />
-          </svg>
-          
-          {/* Círculos decorativos */}
-          <div className="absolute top-40 right-32 w-32 h-32 rounded-full border-2 border-[#f97316]"></div>
-          <div className="absolute top-60 right-20 w-20 h-20 rounded-full border-2 border-[#f97316]"></div>
-          
-          {/* Padrão de grade sutil */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Texto centralizado */}
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Gestão inteligente com IA: mais produtividade, menos complexidade
-            </h1>
-            <p className="text-xl mb-8 text-gray-100">
-              Transformamos IA em clareza: soluções sob medida para empresas que querem crescer rápido.
-            </p>
-            
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-[#1e3a8a] to-[#1e3a8a]/90">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            Gestão Inteligente com IA
+          </h1>
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
+            Mais produtividade, menos complexidade. Automação e IA sob medida para construtoras e escritórios de advocacia.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              size="lg"
-              className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
+              className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold px-8 py-6 rounded-lg shadow-md transition-all text-lg"
               asChild
             >
-              <Link href="/diagnostico">
-                Descubra 3 Oportunidades de IA no Seu Negócio
-              </Link>
+              <Link href="/diagnostico">Diagnóstico Gratuito</Link>
             </Button>
-            
-            <p className="mt-6 text-sm text-gray-200">
-              Analisamos seus processos e identificamos 3 pontos de automação para reduzir custos.
-            </p>
+            <Button
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white/10 font-semibold px-8 py-6 rounded-lg text-lg"
+              asChild
+            >
+              <Link href="/sobre">Saiba Mais</Link>
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Resultados que Geramos com IA */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 text-[#1e3a8a]">
-            O que você ganha trabalhando com IA
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {results.map((result, index) => (
+      {/* Método A.E.D.A. */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl font-bold text-center text-[#1e3a8a] mb-12">Nosso Método A.E.D.A.</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {aedaMethod.map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-[#f97316] text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
+                  {step.letter}
+                </div>
+                <h3 className="text-xl font-bold text-[#1e3a8a] mb-2">{step.title}</h3>
+                <p className="text-gray-600">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefícios */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl font-bold text-center text-[#1e3a8a] mb-12">Por que escolher Studio AEDA Digital?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => {
+              const Icon = benefit.icon;
+              return (
+                <div key={index} className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow">
+                  <Icon className="w-12 h-12 text-[#f97316] mb-4" />
+                  <h3 className="text-xl font-bold text-[#1e3a8a] mb-2">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Serviços */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl font-bold text-center text-[#1e3a8a] mb-12">Nossos Serviços</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                className={`rounded-lg p-8 transition-all ${
+                  service.highlight
+                    ? "bg-[#1e3a8a] text-white shadow-xl scale-105"
+                    : "bg-white border border-gray-200 text-gray-900"
+                }`}
               >
-                <div className="w-12 h-12 bg-[#1e3a8a]/10 rounded-lg flex items-center justify-center mb-4">
-                  <result.icon className="w-6 h-6 text-[#1e3a8a]" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-[#1e3a8a]">{result.title}</h3>
-                <p className="text-gray-600">{result.description}</p>
+                <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
+                <p className={`text-lg font-semibold mb-2 ${service.highlight ? "text-[#f97316]" : "text-[#f97316]"}`}>
+                  {service.price}
+                </p>
+                <p className={`text-sm mb-4 ${service.highlight ? "text-blue-100" : "text-gray-600"}`}>
+                  Duração: {service.duration}
+                </p>
+                <p className={`mb-6 ${service.highlight ? "text-blue-50" : "text-gray-600"}`}>
+                  {service.description}
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button
+                  className={`w-full font-semibold py-6 rounded-lg transition-all ${
+                    service.highlight
+                      ? "bg-[#f97316] hover:bg-[#b86105] text-white"
+                      : "bg-[#1e3a8a] hover:bg-[#1e2f5e] text-white"
+                  }`}
+                  asChild
+                >
+                  <Link href="/diagnostico">{service.cta}</Link>
+                </Button>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Nosso Compromisso */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 text-[#1e3a8a]">
-            Nosso Compromisso com Seus Resultados
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {commitments.map((commitment, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-[#f97316]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <commitment.icon className="w-8 h-8 text-[#f97316]" />
-                </div>
-                <h3 className="text-2xl font-semibold mb-3 text-[#1e3a8a]">{commitment.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{commitment.description}</p>
-              </div>
-            ))}
+      {/* Garantia */}
+      <section className="py-16 px-4 bg-[#1e3a8a] text-white">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl font-bold mb-6">Garantia de Satisfação</h2>
+          <p className="text-xl mb-8 text-blue-100">
+            Se não ficar satisfeito com os resultados nos primeiros 7 dias, devolvemos 100% do seu investimento.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white/10 rounded-lg p-6">
+              <Users className="w-12 h-12 mx-auto mb-4" />
+              <h3 className="text-lg font-bold mb-2">Equipe Experiente</h3>
+              <p className="text-blue-100">Profissionais com anos de experiência em IA e automação</p>
+            </div>
+            <div className="bg-white/10 rounded-lg p-6">
+              <Target className="w-12 h-12 mx-auto mb-4" />
+              <h3 className="text-lg font-bold mb-2">Resultados Comprovados</h3>
+              <p className="text-blue-100">Clientes que aumentaram produtividade em até 40%</p>
+            </div>
+            <div className="bg-white/10 rounded-lg p-6">
+              <Zap className="w-12 h-12 mx-auto mb-4" />
+              <h3 className="text-lg font-bold mb-2">Implementação Rápida</h3>
+              <p className="text-blue-100">Resultados visíveis em 30 dias ou menos</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Final */}
-      <section className="bg-gradient-to-br from-[#1e3a8a] to-[#1e4442] text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-8">
-            Vamos descobrir juntos o potencial da IA no seu negócio?
-          </h2>
-          
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl font-bold text-[#1e3a8a] mb-6">Pronto para transformar seu negócio?</h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Comece com um diagnóstico gratuito e descubra 3 oportunidades de IA específicas para seu negócio.
+          </p>
           <Button
-            size="lg"
-            className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
+            className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold px-12 py-6 rounded-lg shadow-md transition-all text-lg inline-flex items-center gap-2"
             asChild
           >
-            <Link href="/diagnostico">Quero Meu Diagnóstico Gratuito</Link>
+            <Link href="/diagnostico">
+              Solicitar Diagnóstico Gratuito
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </Button>
         </div>
       </section>
-
-      <Footer />
-      <WhatsAppButton />
     </div>
   );
 }

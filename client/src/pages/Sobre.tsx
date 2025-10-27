@@ -1,142 +1,162 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import { Lightbulb, Eye, Users, Zap, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { Heart, Lightbulb, Target, Users, ArrowRight } from "lucide-react";
 
 export default function Sobre() {
   const values = [
     {
-      icon: Lightbulb,
-      title: "Inovação",
-      description: "Buscamos sempre as melhores e mais atuais soluções tecnológicas",
+      icon: Heart,
+      title: "Humanização",
+      description: "Entendemos que cada negócio é único. Nossas soluções são personalizadas para você.",
     },
     {
-      icon: Eye,
-      title: "Clareza",
-      description: "Comunicação transparente e resultados compreensíveis",
+      icon: Lightbulb,
+      title: "Inovação",
+      description: "Utilizamos as melhores tecnologias em IA e automação disponíveis no mercado.",
+    },
+    {
+      icon: Target,
+      title: "Resultados",
+      description: "Focamos em resultados mensuráveis e impacto real no seu negócio.",
     },
     {
       icon: Users,
-      title: "Personalização",
-      description: "Cada solução é única, desenhada para suas necessidades específicas",
-    },
-    {
-      icon: Zap,
-      title: "Produtividade",
-      description: "Foco em otimizar processos e maximizar eficiência",
-    },
-    {
-      icon: TrendingUp,
-      title: "Crescimento",
-      description: "Comprometidos com o sucesso e expansão dos nossos clientes",
+      title: "Parceria",
+      description: "Somos seus parceiros no caminho para a transformação digital.",
     },
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#1e3a8a] to-[#0f2847] text-white pt-32 pb-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Sobre o Studio AEDA Digital</h1>
-          <p className="text-xl max-w-3xl mx-auto text-blue-100">
-            Muito mais que uma agência: somos gestores de soluções inteligentes de IA. Nosso propósito 
-            é tornar a inteligência artificial acessível e estratégica para empresas e profissionais.
+    <div className="min-h-screen bg-white">
+      {/* Hero */}
+      <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-[#1e3a8a] to-[#1e3a8a]/90">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Sobre Studio AEDA Digital</h1>
+          <p className="text-xl md:text-2xl text-blue-100">
+            Transformamos tecnologia em clareza: simplificamos processos, aumentamos produtividade e geramos crescimento.
           </p>
         </div>
       </section>
 
-      {/* Nossa História */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-8 text-[#1e3a8a]">Nossa História</h2>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
-            O Studio AEDA Digital nasceu da percepção de que a inteligência artificial não deveria ser 
-            um privilégio de grandes corporações. Fundada com a missão de democratizar o acesso a 
-            tecnologias avançadas, nossa empresa se dedica a criar soluções personalizadas que realmente 
-            fazem diferença no dia a dia dos nossos clientes.
-          </p>
+      {/* História */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl font-bold text-[#1e3a8a] mb-8">Nossa História</h2>
+          <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+            <p>
+              Studio AEDA Digital nasceu da frustração de profissionais que viam suas horas sendo consumidas por tarefas repetitivas e sem valor agregado. Advogados perdendo prazos, construtoras sem controle de custos, empresas inteiras operando com processos manuais.
+            </p>
+            <p>
+              Percebemos que a inteligência artificial e a automação poderiam ser a solução, mas a maioria das soluções no mercado era cara, complexa e inacessível para pequenas e médias empresas.
+            </p>
+            <p>
+              Então decidimos criar algo diferente: soluções de IA e automação que fossem acessíveis, práticas e focadas em resultados reais. Soluções que transformassem a vida dos profissionais, liberando tempo para o que realmente importa: decisões estratégicas e relacionamentos.
+            </p>
+            <p>
+              Hoje, ajudamos dezenas de empresas a automatizar seus processos, aumentar produtividade e crescer com confiança.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Nosso Propósito */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-8 text-[#1e3a8a]">Nosso Propósito</h2>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto text-center mb-12">
-            Acreditamos que a tecnologia deve servir às pessoas, e não o contrário. Por isso, desenvolvemos 
-            soluções que não são apenas poderosas, mas também intuitivas e acessíveis. Nosso objetivo é 
-            transformar complexidade em clareza, dados em insights e processos em resultados.
-          </p>
-          
-          {/* Citação em destaque */}
-          <div className="max-w-3xl mx-auto bg-white rounded-xl p-8 shadow-sm border-l-4 border-[#1e3a8a]">
-            <div className="flex items-start gap-4">
-              <span className="text-6xl text-[#1e3a8a] leading-none">"</span>
-              <p className="text-xl italic text-gray-800 pt-4">
-                Nossa missão é ser a ponte entre a inteligência artificial e o sucesso do seu negócio.
+      {/* Missão, Visão, Valores */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="container mx-auto max-w-4xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white rounded-lg p-8 border-l-4 border-[#f97316]">
+              <h3 className="text-2xl font-bold text-[#1e3a8a] mb-4">Missão</h3>
+              <p className="text-gray-600">
+                Democratizar o acesso à inteligência artificial e automação, transformando a forma como pequenas e médias empresas operam.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg p-8 border-l-4 border-[#f97316]">
+              <h3 className="text-2xl font-bold text-[#1e3a8a] mb-4">Visão</h3>
+              <p className="text-gray-600">
+                Ser a referência em soluções de IA e automação para construtoras e escritórios de advocacia na América Latina.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg p-8 border-l-4 border-[#f97316]">
+              <h3 className="text-2xl font-bold text-[#1e3a8a] mb-4">Valores</h3>
+              <p className="text-gray-600">
+                Humanização, inovação, transparência, parceria e compromisso com resultados.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Nossos Valores */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 text-[#1e3a8a]">Nossos Valores</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {values.map((value, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow"
-              >
-                <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
-                  <value.icon className="w-6 h-6 text-[#1e3a8a]" />
+      {/* Valores Detalhados */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl font-bold text-[#1e3a8a] mb-12 text-center">Nossos Valores</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {values.map((value, index) => {
+              const Icon = value.icon;
+              return (
+                <div key={index} className="flex gap-4">
+                  <Icon className="w-12 h-12 text-[#f97316] flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-bold text-[#1e3a8a] mb-2">{value.title}</h3>
+                    <p className="text-gray-600">{value.description}</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-[#1e3a8a]">{value.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* CTA Final */}
-      <section className="bg-gradient-to-br from-[#1e3a8a] to-[#0f2847] text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-8">
-            Descubra como podemos otimizar seus processos e aumentar sua produtividade
-          </h2>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-[#f97316] hover:bg-[#b45309] text-white font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
-              asChild
-            >
-              <Link href="/contato">Fale Conosco</Link>
-            </Button>
-            
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#1e3a8a] font-semibold px-10 py-7 text-lg rounded-lg transition-all"
-              asChild
-            >
-              <Link href="/diagnostico">Diagnóstico Gratuito</Link>
-            </Button>
+      {/* Por que nos escolher */}
+      <section className="py-16 px-4 bg-[#1e3a8a] text-white">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl font-bold mb-12 text-center">Por que escolher Studio AEDA Digital?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold mb-4 text-[#f97316]">Experiência Comprovada</h3>
+              <p className="text-blue-100 leading-relaxed">
+                Nossa equipe tem anos de experiência em implementação de IA, automação e transformação digital. Sabemos o que funciona e o que não funciona.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4 text-[#f97316]">Foco em Resultados</h3>
+              <p className="text-blue-100 leading-relaxed">
+                Não vendemos promessas. Vendemos resultados mensuráveis. Nossos clientes aumentam produtividade em até 40% em 30 dias.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4 text-[#f97316]">Suporte Personalizado</h3>
+              <p className="text-blue-100 leading-relaxed">
+                Cada negócio é único. Oferecemos suporte personalizado e acompanhamento contínuo para garantir seu sucesso.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4 text-[#f97316]">Garantia de Satisfação</h3>
+              <p className="text-blue-100 leading-relaxed">
+                Se não ficar satisfeito com os resultados nos primeiros 7 dias, devolvemos 100% do seu investimento.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <Footer />
-      <WhatsAppButton />
+      {/* CTA */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl font-bold text-[#1e3a8a] mb-6">Vamos trabalhar juntos?</h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Comece com um diagnóstico gratuito e descubra como podemos ajudar seu negócio.
+          </p>
+          <Button
+            className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold px-12 py-6 rounded-lg shadow-md transition-all text-lg inline-flex items-center gap-2"
+            asChild
+          >
+            <Link href="/diagnostico">
+              Solicitar Diagnóstico Gratuito
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </Button>
+        </div>
+      </section>
     </div>
   );
 }
-

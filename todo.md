@@ -135,9 +135,9 @@
 
 
 ## 🔄 Mudança: Remover Diagnóstico Gratuito
-- [ ] Remover todas as referências a "Diagnóstico Gratuito"
-- [ ] Substituir por "Agendar Contato" em todos os CTAs
-- [ ] Reescrever Contato.tsx com formulário de agendamento
-- [ ] Atualizar Home.tsx com novo CTA
-- [ ] Atualizar Sobre.tsx com novo CTA
+- [x] Remover todas as referências a "Diagnóstico Gratuito"
+- [x] Substituir por "Agendar Contato" em todos os CTAs
+- [x] Reescrever Contato.tsx com formulário de agendamento
+- [x] Atualizar Home.tsx com novo CTA
+- [x] Atualizar Sobre.tsx com novo CTA
 

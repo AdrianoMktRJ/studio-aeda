@@ -12,6 +12,8 @@ import Contato from "./pages/Contato";
 import Diagnostico from "./pages/Diagnostico";
 import Privacidade from "./pages/Privacidade";
 import DiagnosticoDetalhado from "./pages/DiagnosticoDetalhado";
+import Construtoras from "./pages/Construtoras";
+import Advogados from "./pages/Advogados";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -21,6 +23,8 @@ function Router() {
       <Route path={"/sobre"} component={Sobre} />
       <Route path={"/servicos"} component={Servicos} />
       <Route path={"/contato"} component={Contato} />
+      <Route path={"/construtoras"} component={Construtoras} />
+      <Route path={"/advogados"} component={Advogados} />
       <Route path={"/diagnostico"} component={Diagnostico} />
       <Route path={"/diagnostico-detalhado"} component={DiagnosticoDetalhado} />
       <Route path={"/privacidade"} component={Privacidade} />

@@ -1,156 +1,99 @@
-# Studio AEDA Digital - TODO List
+# Studio AEDA Digital - Checklist de Mudanças
 
-## 🎨 Atualização de Design e Branding
+## ✅ Fase 1: Landing Pages Segmentadas (CONCLUÍDA)
 
-### Remover Elementos Roxos
-- [x] Remover cor roxa (#5b3cc4) da Hero Section
-- [x] Remover gradientes roxos do background
-- [x] Remover bg-purple-100 dos cards de resultados
-- [x] Remover text-purple-200 dos textos
-- [x] Remover bg-purple-100 dos ícones de compromisso
-- [x] Remover todos os elementos decorativos roxos (círculos, linhas)
+### Construtoras
+- [x] Criar página `/construtoras` com URL própria
+- [x] Escrever conteúdo segmentado para construtoras
+- [x] Adicionar exemplos de IA no setor de construção
+- [x] Criar formulário específico (número de obras, tamanho da empresa)
+- [x] Implementar CTA "Agendar Contato" segmentado
 
-### Remover Imagem da Coruja
-- [x] Remover imagem da coruja (/owl-aeda.png) da Hero Section
-- [x] Remover div decorativa ao redor da coruja
-- [x] Ajustar layout da Hero para ficar centralizado sem a imagem
+### Advogados
+- [x] Criar página `/advogados` com URL própria
+- [x] Escrever conteúdo segmentado para advogados
+- [x] Adicionar exemplos de IA no setor jurídico
+- [x] Criar formulário específico (área de atuação, número de processos)
+- [x] Implementar CTA "Agendar Contato" segmentado
 
-### Aplicar Cores da Marca AEDA
-- [x] Aplicar verde petrol (#2D5F5D) como cor primária
-- [x] Aplicar laranja queimado (#D97706) como cor secundária
-- [x] Atualizar Hero Section com gradiente verde petrol
-- [x] Atualizar cards com ícones verde petrol
-- [x] Atualizar seção de compromisso com ícones laranja queimado
-- [x] Atualizar CTA final com gradiente verde petrol
+## 🎯 Fase 2: Reestruturação da Navegação
 
-### Logo AEDA
-- [ ] Verificar se logo AEDA (letra "A") está no projeto
-- [ ] Adicionar logo no Header se necessário
-- [ ] Verificar favicon com logo AEDA
+- [ ] Remover seletor modal da Home
+- [ ] Adicionar links "Construtoras" e "Advogados" no menu principal
+- [ ] Unificar botões CTA para "Agendar Contato"
+- [ ] Remover links duplicados de CTAs
+- [ ] Testar navegação em todas as páginas
 
-## 🎯 Seletor de Perfil
+## 🎯 Fase 3: Revisão de Conteúdo e Seção Equipe
 
-### Modal de Seleção
-- [x] Criar componente ProfileSelector.tsx
-- [x] Implementar modal com dois cards: Advogado e Construtora
-- [x] Adicionar delay de 3 segundos antes de mostrar
-- [x] Implementar botão de fechar (X)
-- [x] Implementar fechar ao clicar fora do modal
-- [x] Estilizar com cores da marca (verde petrol + laranja queimado)
+### Conteúdo
+- [ ] Remover claims sem prova ("clientes aumentam 40%")
+- [ ] Usar referências a estudos gerais de mercado
+- [ ] Ajustar textos das seções para ser mais honesto
+- [ ] Adicionar disclaimers onde necessário
 
-### Funcionalidade
-- [x] Salvar seleção no localStorage
-- [x] Não mostrar novamente se já foi selecionado
-- [x] Personalizar conteúdo baseado na seleção
-- [x] Configurar mensagens diferentes do WhatsApp por perfil
+### Seção Equipe
+- [ ] Criar seção "Equipe/Quem Somos"
+- [ ] Destacar experiência dos fundadores
+- [ ] Adicionar certificações
+- [ ] Incluir participação em eventos
+- [ ] Adicionar fotos e bios dos membros
 
-### Integração
-- [x] Adicionar ProfileSelector no App.tsx ou Home.tsx
-- [x] Criar contexto para gerenciar perfil selecionado
-- [x] Atualizar componentes para usar perfil do contexto
+### Conteúdo Adicional
+- [ ] Criar artigos sobre automação
+- [ ] Preparar vídeos ou demos práticas
+- [ ] Adicionar case studies (quando houver clientes)
 
-## 📱 Componentes a Verificar
-- [x] Header - verificar se usa cores corretas
-- [x] Footer - verificar se usa cores corretas
-- [x] WhatsAppButton - verificar se usa cores corretas
-- [ ] Botões - atualizar para usar cores da marca
+## 🎯 Fase 4: Design Mais Leve
 
-## 🧪 Testes
-- [x] Testar responsividade mobile
-- [x] Testar modal de perfil em diferentes dispositivos
-- [x] Verificar que não há mais elementos roxos
-- [x] Verificar que não há mais referências à coruja
-- [x] Testar localStorage do perfil
+- [ ] Reduzir tons de azul escuro
+- [ ] Adotar paleta mais suave com cores neutras
+- [ ] Aumentar contraste para facilitar leitura
+- [ ] Manter consistência visual entre páginas
+- [ ] Revisar tipografia, ícones e espaçamento
 
-## 🚀 Deploy
-- [x] Fazer checkpoint após todas as mudanças
-- [x] Testar localmente antes do deploy
-- [ ] Fazer deploy para Vercel
-- [ ] Verificar cache do Vercel
-- [ ] Testar site em produção
+## 🎯 Fase 5: Garantia e Política de Cookies
 
+- [ ] Reposicionar seção "Garantia de Satisfação" para ficar mais visível
+- [ ] Configurar barra de cookies para desaparecer após aceitar/rejeitar
+- [ ] Reduzir espaço ocupado pelo banner de cookies
+- [ ] Testar comportamento em mobile
 
+## 🎯 Fase 6: SEO e Performance
 
-### Logo AEDA Adicionado
-- [x] Logo oficial AEDA (letra A) adicionado em client/public/logo-aeda.png
-- [x] Header usando logo correto
-- [x] Footer usando logo correto
+- [ ] Ajustar H1, H2 com palavras-chave específicas
+- [ ] Implementar meta descriptions nas landing pages
+- [ ] Adicionar tags alt em todas as imagens
+- [ ] Otimizar tempo de carregamento
+- [ ] Implementar lazy loading de imagens
+- [ ] Testar com Google PageSpeed Insights
 
+## 🎯 Fase 7: Formulários e Integração CRM
 
+- [ ] Substituir links de e-mail por formulários integrados
+- [ ] Implementar validação de campos
+- [ ] Integrar formulários a CRM ou planilha
+- [ ] Testar captura de leads
+- [ ] Configurar notificações de novo lead
 
+## 🎯 Fase 8: Prova Social Honesta
 
-## 🐛 Correções
-- [x] Corrigir erro DialogTitle no ProfileSelector (acessibilidade)
-- [x] Remover animação do logo no Header
+- [ ] Trocar "Resultados Comprovados" por "Nossos Valores" ou "Metodologia"
+- [ ] Explicar etapas do serviço
+- [ ] Descrever resultados esperados
+- [ ] Remover depoimentos fictícios
+- [ ] Preparar espaço para case studies reais
 
+## 📋 Resumo do Progresso
 
-
-## 🔧 Correção Deploy Vercel
-- [x] Criar arquivo .env.production com variáveis de ambiente
-- [ ] Corrigir erro "Failed to construct 'URL': Invalid URL"
-
-
-
-## 🐛 Novos Bugs Reportados
-- [x] Site em produção ainda está com design antigo (roxo)
-- [x] Outras páginas (Sobre, Serviços, Contato) ainda estão roxas
-- [x] Seletor de perfil não tem opção de voltar a escolher depois de selecionar
-
-
-
-
-## 🎨 Mudança de Paleta de Cores
-- [x] Substituir Verde Petrol (#2D5F5D) por Azul Escuro (#1e3a8a)
-- [x] Manter Laranja (#f97316) como secundária
-- [x] Adicionar Cinza (#64748b) como neutra
-- [x] Atualizar todas as páginas com nova paleta
-- [ ] Testar no site em produção
-
-
-
-
-## 🎨 Logo com Novas Cores
-- [x] Recolorir logo de Verde Petrol + Laranja para Azul Escuro + Laranja
-
-
-
-- [x] Mudar "Studio AEDA Digital" para azul escuro (#1e3a8a) em todo o site
-
-
-
-
-## 🔄 Reescrita Completa do Site (Baseado em Documentos)
-- [x] Reescrever Home.tsx com novo conteúdo e estrutura
-- [ ] Reescrever Sobre.tsx com história alinhada
-- [ ] Reescrever Serviços.tsx com 3 produtos claros
-- [ ] Atualizar Contato.tsx com formulários segmentados
-- [ ] Adicionar seção de Benefícios
-- [ ] Adicionar seção de Método A.E.D.A.
-- [ ] Adicionar provas sociais (depoimentos/cases)
-- [ ] Implementar segmentação (Construtoras vs Advogados)
-- [ ] Adicionar meta descriptions em todas as páginas
-- [ ] Implementar banner LGPD/Cookies
-
-
-
-
-## 🔄 Mudança: Remover Diagnóstico Gratuito
-- [x] Remover todas as referências a "Diagnóstico Gratuito"
-- [x] Substituir por "Agendar Contato" em todos os CTAs
-- [x] Reescrever Contato.tsx com formulário de agendamento
-- [x] Atualizar Home.tsx com novo CTA
-- [x] Atualizar Sobre.tsx com novo CTA
-
-
-
-
-## 🎯 Nova Feature: Seletor de Perfil Integrado na Página de Serviços
-- [ ] Remover modal intrusivo ProfileSelector atual
-- [ ] Criar toggle elegante de segmentação (Construtoras/Advogados) na página Serviços
-- [ ] Implementar conteúdo dinâmico baseado na seleção
-- [ ] Personalizar exemplos de serviços por segmento
-- [ ] Personalizar CTAs por segmento
-- [ ] Manter conteúdo geral visível
-- [ ] Garantir UX não intrusiva
-- [ ] Testar responsividade do toggle
+| Fase | Status | Progresso |
+|------|--------|-----------|
+| 1 - Landing Pages | ✅ Concluída | 100% |
+| 2 - Navegação | ⏳ Pendente | 0% |
+| 3 - Conteúdo e Equipe | ⏳ Pendente | 0% |
+| 4 - Design | ⏳ Pendente | 0% |
+| 5 - Garantia e Cookies | ⏳ Pendente | 0% |
+| 6 - SEO e Performance | ⏳ Pendente | 0% |
+| 7 - Formulários e CRM | ⏳ Pendente | 0% |
+| 8 - Prova Social | ⏳ Pendente | 0% |
 

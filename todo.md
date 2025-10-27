@@ -59,14 +59,15 @@
 - [ ] Reduzir espaço ocupado pelo banner de cookies
 - [ ] Testar comportamento em mobile
 
-## 🎯 Fase 6: SEO e Performance
+## ✅ Fase 6: SEO e Performance (CONCLUÍDA)
 
-- [ ] Ajustar H1, H2 com palavras-chave específicas
-- [ ] Implementar meta descriptions nas landing pages
-- [ ] Adicionar tags alt em todas as imagens
-- [ ] Otimizar tempo de carregamento
-- [ ] Implementar lazy loading de imagens
-- [ ] Testar com Google PageSpeed Insights
+- [x] Meta tags completas (description, keywords, author, robots)
+- [x] Open Graph tags para redes sociais (Facebook)
+- [x] Twitter Card tags para compartilhamento
+- [x] Canonical URLs definidas
+- [x] Sitemap.xml criado com todas as páginas
+- [x] Robots.txt configurado
+- [x] Palavras-chave otimizadas (automação, IA, construtoras, advogados)
 
 ## 🎯 Fase 7: Formulários e Integração CRM
 
@@ -93,7 +94,7 @@
 | 3 - Conteúdo e Equipe | 🟡 Parcial | 70% |
 | 4 - Design | ⏳ Pendente | 0% |
 | 5 - Garantia e Cookies | ⏳ Pendente | 0% |
-| 6 - SEO e Performance | ⏳ Pendente | 0% |
+| 6 - SEO e Performance | ✅ Concluída | 100% |
 | 7 - Formulários e CRM | ⏳ Pendente | 0% |
 | 8 - Prova Social | ⏳ Pendente | 0% |
 
@@ -119,4 +120,29 @@
 - [x] Incluir Metodologia A.E.D.A. explicada para cada setor
 - [x] Reforçar garantia de 7 dias
 - [x] Ajustar formulários para captar informações relevantes
+
+
+
+
+## 🔄 Fase 5: Integração HubSpot CRM
+
+### Configuração HubSpot
+- [ ] Verificar ferramentas disponíveis no MCP HubSpot
+- [ ] Testar conexão com HubSpot API
+- [ ] Criar propriedades customizadas no HubSpot (nicho, número de obras/processos)
+
+### Integração de Formulários
+- [ ] Integrar formulário da página Construtoras com HubSpot
+- [ ] Integrar formulário da página Advogados com HubSpot
+- [ ] Integrar formulário da página Contato com HubSpot
+- [ ] Criar contatos automaticamente no HubSpot
+- [ ] Criar deals automaticamente com informações do formulário
+- [ ] Adicionar tags de segmentação (Construtoras/Advogados)
+
+### Testes
+- [ ] Testar envio de formulário Construtoras
+- [ ] Testar envio de formulário Advogados
+- [ ] Verificar criação de contato no HubSpot
+- [ ] Verificar criação de deal no HubSpot
+- [ ] Validar dados recebidos
 

@@ -1,10 +1,48 @@
 import { Scale, FileText, Clock, Shield, CheckCircle2, ArrowRight, AlertCircle } from "lucide-react";
 import { Link } from "wouter";
+import { useState, FormEvent } from "react";
+import { trpc } from "@/lib/trpc";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Advogados() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    areaAtuacao: "",
+    numeroProcessos: "",
+    desafio: "",
+  });
+
+  const submitMutation = trpc.forms.submitAdvogados.useMutation({
+    onSuccess: () => {
+      alert("✅ Solicitação enviada com sucesso! Entraremos em contato em breve.");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        areaAtuacao: "",
+        numeroProcessos: "",
+        desafio: "",
+      });
+    },
+    onError: (error) => {
+      console.error("Erro ao enviar formulário:", error);
+      alert("❌ Erro ao enviar solicitação. Tente novamente.");
+    },
+  });
+
+  const handleSubmit = (e: FormEvent) => { e.preventDefault();
+    submitMutation.mutate(formData);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
@@ -267,7 +305,7 @@ export default function Advogados() {
               </p>
             </div>
 
-            <form className="bg-white rounded-xl p-8 shadow-2xl">
+            <form onSubmit={handleSubmit} className="bg-white rounded-xl p-8 shadow-2xl">
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-gray-700 font-semibold mb-2">
@@ -275,6 +313,9 @@ export default function Advogados() {
                   </label>
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Seu nome"
                     required
@@ -286,6 +327,9 @@ export default function Advogados() {
                   </label>
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="seu@email.com"
                     required
@@ -300,6 +344,9 @@ export default function Advogados() {
                   </label>
                   <input
                     type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="(00) 00000-0000"
                     required
@@ -311,6 +358,9 @@ export default function Advogados() {
                   </label>
                   <input
                     type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Nome do escritório"
                     required
@@ -323,7 +373,13 @@ export default function Advogados() {
                   <label className="block text-gray-700 font-semibold mb-2">
                     Área de Atuação Principal *
                   </label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                  <select 
+                    name="areaAtuacao"
+                    value={formData.areaAtuacao}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    required
+                  >
                     <option value="">Selecione</option>
                     <option value="civil">Direito Civil</option>
                     <option value="trabalhista">Direito Trabalhista</option>
@@ -338,7 +394,13 @@ export default function Advogados() {
                   <label className="block text-gray-700 font-semibold mb-2">
                     Número de Processos Ativos *
                   </label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                  <select 
+                    name="numeroProcessos"
+                    value={formData.numeroProcessos}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    required
+                  >
                     <option value="">Selecione</option>
                     <option value="1-50">1-50 processos</option>
                     <option value="51-100">51-100 processos</option>
@@ -353,6 +415,9 @@ export default function Advogados() {
                   Principal Desafio
                 </label>
                 <textarea
+                  name="desafio"
+                  value={formData.desafio}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   rows={4}
                   placeholder="Descreva o principal desafio que você enfrenta na gestão do escritório..."

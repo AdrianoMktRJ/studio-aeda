@@ -1,0 +1,1 @@
+ALTER TABLE `form_submissions` MODIFY COLUMN `type` enum('diagnostico','contato','construtoras','advogados') NOT NULL;

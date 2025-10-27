@@ -128,10 +128,11 @@
 
 ### Configuração HubSpot
 - [x] Verificar ferramentas disponíveis no MCP HubSpot
-- [ ] Autenticar com HubSpot API
+- [x] Autenticar com HubSpot API
 - [ ] Criar propriedades customizadas no HubSpot (tipo_cliente, numero_obras, area_atuacao, porte_empresa, principais_desafios)
 
 ### Integração de Formulários
+- [ ] Criar função helper para integração HubSpot
 - [ ] Criar endpoint tRPC para enviar dados ao HubSpot
 - [ ] Integrar formulário da página Construtoras com HubSpot
 - [ ] Integrar formulário da página Advogados com HubSpot

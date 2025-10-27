@@ -5,6 +5,7 @@ import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { createFormSubmission } from "./db";
 import { notifyOwner } from "./_core/notification";
+import { createHubSpotContact, createHubSpotDeal, searchHubSpotContact } from "./hubspot";
 
 export const appRouter = router({
   system: systemRouter,
@@ -192,6 +193,172 @@ export const appRouter = router({
         // TODO: Gerar relatório PDF automaticamente
 
         return { success: true, id, schedulingUrl };
+      }),
+
+    // Endpoint para formulário de Construtoras
+    submitConstrutoras: publicProcedure
+      .input(
+        z.object({
+          name: z.string(),
+          email: z.string().email(),
+          phone: z.string(),
+          company: z.string(),
+          numeroObras: z.string(),
+          porte: z.string(),
+          desafios: z.string().optional(),
+        })
+      )
+      .mutation(async ({ input }) => {
+        // Gerar ID único
+        const id = `const_${Date.now()}_${Math.random().toString(36).substring(7)}`;
+
+        // Salvar no banco de dados
+        await createFormSubmission({
+          id,
+          type: "construtoras",
+          name: input.name,
+          email: input.email,
+          phone: input.phone,
+          company: input.company,
+          employees: input.porte,
+          challenge: `Obras: ${input.numeroObras} | Desafios: ${input.desafios || "Não informado"}`,
+          message: null,
+        });
+
+        // Integração com HubSpot
+        try {
+          // Buscar contato existente
+          let contactId = await searchHubSpotContact(input.email);
+
+          // Se não existir, criar novo contato
+          if (!contactId) {
+            const [firstname, ...lastnameArr] = input.name.split(' ');
+            const lastname = lastnameArr.join(' ');
+
+            contactId = await createHubSpotContact({
+              email: input.email,
+              firstname,
+              lastname: lastname || undefined,
+              phone: input.phone,
+              company: input.company,
+            });
+          }
+
+          // Criar deal no HubSpot
+          await createHubSpotDeal(
+            {
+              dealname: `Construtora: ${input.company}`,
+              dealstage: 'appointmentscheduled',
+              pipeline: 'default',
+            },
+            contactId
+          );
+
+          console.log('✅ Lead enviado para HubSpot com sucesso');
+        } catch (error) {
+          console.error('❌ Erro ao enviar para HubSpot:', error);
+          // Não falhar o formulário se HubSpot falhar
+        }
+
+        // Enviar notificação ao proprietário
+        const message = `🏗️ **Novo Lead - Construtoras**\n\n` +
+          `👤 **Nome:** ${input.name}\n` +
+          `📧 **Email:** ${input.email}\n` +
+          `📱 **Telefone:** ${input.phone}\n` +
+          `🏭 **Construtora:** ${input.company}\n` +
+          `🏗️ **Obras Ativas:** ${input.numeroObras}\n` +
+          `📊 **Porte:** ${input.porte}\n` +
+          `🎯 **Desafios:** ${input.desafios || "Não informado"}`;
+
+        await notifyOwner({
+          title: "🏗️ Novo Lead Construtoras - Studio AEDA",
+          content: message,
+        });
+
+        return { success: true, id };
+      }),
+
+    // Endpoint para formulário de Advogados
+    submitAdvogados: publicProcedure
+      .input(
+        z.object({
+          name: z.string(),
+          email: z.string().email(),
+          phone: z.string(),
+          company: z.string(),
+          areaAtuacao: z.string(),
+          numeroProcessos: z.string(),
+          desafio: z.string().optional(),
+        })
+      )
+      .mutation(async ({ input }) => {
+        // Gerar ID único
+        const id = `adv_${Date.now()}_${Math.random().toString(36).substring(7)}`;
+
+        // Salvar no banco de dados
+        await createFormSubmission({
+          id,
+          type: "advogados",
+          name: input.name,
+          email: input.email,
+          phone: input.phone,
+          company: input.company,
+          employees: input.numeroProcessos,
+          challenge: `Área: ${input.areaAtuacao} | Desafio: ${input.desafio || "Não informado"}`,
+          message: null,
+        });
+
+        // Integração com HubSpot
+        try {
+          // Buscar contato existente
+          let contactId = await searchHubSpotContact(input.email);
+
+          // Se não existir, criar novo contato
+          if (!contactId) {
+            const [firstname, ...lastnameArr] = input.name.split(' ');
+            const lastname = lastnameArr.join(' ');
+
+            contactId = await createHubSpotContact({
+              email: input.email,
+              firstname,
+              lastname: lastname || undefined,
+              phone: input.phone,
+              company: input.company,
+            });
+          }
+
+          // Criar deal no HubSpot
+          await createHubSpotDeal(
+            {
+              dealname: `Advogado: ${input.company}`,
+              dealstage: 'appointmentscheduled',
+              pipeline: 'default',
+            },
+            contactId
+          );
+
+          console.log('✅ Lead enviado para HubSpot com sucesso');
+        } catch (error) {
+          console.error('❌ Erro ao enviar para HubSpot:', error);
+          // Não falhar o formulário se HubSpot falhar
+        }
+
+        // Enviar notificação ao proprietário
+        const message = `⚖️ **Novo Lead - Advogados**\n\n` +
+          `👤 **Nome:** ${input.name}\n` +
+          `📧 **Email:** ${input.email}\n` +
+          `📱 **Telefone:** ${input.phone}\n` +
+          `🏛️ **Escritório:** ${input.company}\n` +
+          `⚖️ **Área de Atuação:** ${input.areaAtuacao}\n` +
+          `📁 **Processos Ativos:** ${input.numeroProcessos}\n` +
+          `🎯 **Desafio:** ${input.desafio || "Não informado"}`;
+
+        await notifyOwner({
+          title: "⚖️ Novo Lead Advogados - Studio AEDA",
+          content: message,
+        });
+
+        return { success: true, id };
       }),
   }),
 });

@@ -23,7 +23,7 @@ export type InsertUser = typeof users.$inferInsert;
  */
 export const formSubmissions = mysqlTable("form_submissions", {
   id: varchar("id", { length: 64 }).primaryKey(),
-  type: mysqlEnum("type", ["diagnostico", "contato"]).notNull(),
+  type: mysqlEnum("type", ["diagnostico", "contato", "construtoras", "advogados"]).notNull(),
   name: varchar("name", { length: 255 }).notNull(),
   email: varchar("email", { length: 320 }).notNull(),
   phone: varchar("phone", { length: 50 }),

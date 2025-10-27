@@ -16,13 +16,13 @@
 - [x] Criar formulário específico (área de atuação, número de processos)
 - [x] Implementar CTA "Agendar Contato" segmentado
 
-## 🎯 Fase 2: Reestruturação da Navegação
+## ✅ Fase 2: Reestruturação da Navegação (CONCLUÍDA)
 
-- [ ] Remover seletor modal da Home
-- [ ] Adicionar links "Construtoras" e "Advogados" no menu principal
-- [ ] Unificar botões CTA para "Agendar Contato"
-- [ ] Remover links duplicados de CTAs
-- [ ] Testar navegação em todas as páginas
+- [x] Remover seletor modal da Home
+- [x] Adicionar links "Construtoras" e "Advogados" no menu principal (Header)
+- [x] Adicionar links "Construtoras" e "Advogados" no Footer
+- [x] Unificar botões CTA para "Solicitar Contato"
+- [x] Testar navegação em todas as páginas
 
 ## 🎯 Fase 3: Revisão de Conteúdo e Seção Equipe
 
@@ -89,7 +89,7 @@
 | Fase | Status | Progresso |
 |------|--------|-----------|
 | 1 - Landing Pages | ✅ Concluída | 100% |
-| 2 - Navegação | ⏳ Pendente | 0% |
+| 2 - Navegação | ✅ Concluída | 100% |
 | 3 - Conteúdo e Equipe | ⏳ Pendente | 0% |
 | 4 - Design | ⏳ Pendente | 0% |
 | 5 - Garantia e Cookies | ⏳ Pendente | 0% |

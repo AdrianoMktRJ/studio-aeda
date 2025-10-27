@@ -14,7 +14,7 @@ export default function Home() {
     {
       icon: TrendingUp,
       title: "Aumento de Produtividade",
-      description: "Até 40% mais eficiência operacional em 30 dias",
+      description: "Estudos mostram que a automação pode reduzir tarefas repetitivas significativamente",
     },
     {
       icon: Brain,
@@ -220,13 +220,13 @@ export default function Home() {
             </div>
             <div className="bg-white/10 rounded-lg p-6">
               <Target className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2">Resultados Comprovados</h3>
-              <p className="text-blue-100">Clientes que aumentaram produtividade em até 40%</p>
+              <h3 className="text-lg font-bold mb-2">Nossa Metodologia</h3>
+              <p className="text-blue-100">Processo estruturado A.E.D.A. para garantir resultados consistentes</p>
             </div>
             <div className="bg-white/10 rounded-lg p-6">
               <Zap className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2">Implementação Rápida</h3>
-              <p className="text-blue-100">Resultados visíveis em 30 dias ou menos</p>
+              <h3 className="text-lg font-bold mb-2">Implementação Eficiente</h3>
+              <p className="text-blue-100">Acompanhamento contínuo para garantir adaptação e resultados</p>
             </div>
           </div>
         </div>

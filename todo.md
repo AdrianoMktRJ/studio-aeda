@@ -83,3 +83,9 @@
 - [x] Corrigir erro DialogTitle no ProfileSelector (acessibilidade)
 - [x] Remover animação do logo no Header
 
+
+
+## 🔧 Correção Deploy Vercel
+- [x] Criar arquivo .env.production com variáveis de ambiente
+- [ ] Corrigir erro "Failed to construct 'URL': Invalid URL"
+

@@ -149,3 +149,20 @@
 - [ ] Verificar criação de deal no HubSpot
 - [ ] Validar dados recebidos
 
+
+
+
+## ✅ Animações e Efeitos Visuais (CONCLUÍDA)
+
+### Animações Implementadas
+- [x] Implementar fade-in ao scroll (elementos aparecem suavemente quando entram no viewport)
+- [x] Adicionar hover effect nos cards (elevação com scale e shadow)
+- [x] Adicionar hover effect nos botões (mudança de cor e scale)
+- [x] Animar círculos A.E.D.A. na entrada
+- [x] Destacar card central de serviços com borda laranja
+- [x] Garantir transições suaves em todas as mudanças de estado
+- [x] Adicionar animação de entrada no hero section
+- [x] Implementar scroll reveal para seções
+- [x] Criar hook useScrollReveal para detectar elementos no viewport
+
+

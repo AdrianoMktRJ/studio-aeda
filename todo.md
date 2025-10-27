@@ -89,3 +89,10 @@
 - [x] Criar arquivo .env.production com variáveis de ambiente
 - [ ] Corrigir erro "Failed to construct 'URL': Invalid URL"
 
+
+
+## 🐛 Novos Bugs Reportados
+- [x] Site em produção ainda está com design antigo (roxo)
+- [x] Outras páginas (Sobre, Serviços, Contato) ainda estão roxas
+- [x] Seletor de perfil não tem opção de voltar a escolher depois de selecionar
+

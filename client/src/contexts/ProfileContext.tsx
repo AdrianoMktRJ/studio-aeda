@@ -5,6 +5,7 @@ export type ProfileType = "advogado" | "construtora" | null;
 interface ProfileContextType {
   profile: ProfileType;
   setProfile: (profile: ProfileType) => void;
+  resetProfile: () => void;
   hasSelectedProfile: boolean;
 }
 
@@ -35,8 +36,14 @@ export function ProfileProvider({ children }: { children: ReactNode }) {
     }
   };
 
+  const resetProfile = () => {
+    setProfileState(null);
+    localStorage.removeItem("userProfile");
+    setHasSelectedProfile(false);
+  };
+
   return (
-    <ProfileContext.Provider value={{ profile, setProfile, hasSelectedProfile }}>
+    <ProfileContext.Provider value={{ profile, setProfile, resetProfile, hasSelectedProfile }}>
       {children}
     </ProfileContext.Provider>
   );

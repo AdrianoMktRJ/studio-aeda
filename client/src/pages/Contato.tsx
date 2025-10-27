@@ -81,10 +81,10 @@ export default function Contato() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#5b3cc4] to-[#4a2ea3] text-white pt-32 pb-20">
+      <section className="bg-gradient-to-br from-[#2D5F5D] to-[#1e4644] text-white pt-32 pb-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Entre em Contato</h1>
-          <p className="text-xl max-w-3xl mx-auto text-purple-100">
+          <p className="text-xl max-w-3xl mx-auto text-teal-100">
             Estamos prontos para ajudar sua empresa a crescer com inteligência artificial
           </p>
         </div>
@@ -174,7 +174,7 @@ export default function Contato() {
                   type="submit"
                   size="lg"
                   disabled={submitMutation.isPending}
-                  className="w-full bg-[#5b3cc4] hover:bg-[#5b3cc4] text-white font-semibold py-6 text-lg rounded-lg shadow-md transition-all"
+                  className="w-full bg-[#2D5F5D] hover:bg-[#2D5F5D] text-white font-semibold py-6 text-lg rounded-lg shadow-md transition-all"
                 >
                   {submitMutation.isPending ? (
                     <>
@@ -204,8 +204,8 @@ export default function Contato() {
                     className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow"
                   >
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <info.icon className="w-6 h-6 text-[#5b3cc4]" />
+                      <div className="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <info.icon className="w-6 h-6 text-[#2D5F5D]" />
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold text-gray-900 mb-1">
@@ -214,7 +214,7 @@ export default function Contato() {
                         {info.link ? (
                           <a
                             href={info.link}
-                            className="text-[#5b3cc4] hover:text-[#5b3cc4] transition-colors"
+                            className="text-[#2D5F5D] hover:text-[#2D5F5D] transition-colors"
                             target="_blank"
                             rel="noopener noreferrer"
                           >

@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, RefreshCw } from "lucide-react";
+import { useProfile } from "@/contexts/ProfileContext";
 
 export default function Header() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
+  const { hasSelectedProfile, resetProfile } = useProfile();
 
   const navItems = [
     { label: "Home", path: "/" },
@@ -80,6 +82,17 @@ export default function Header() {
                 </div>
               )}
             </div>
+
+            {hasSelectedProfile && (
+              <button
+                onClick={resetProfile}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
+                title="Reescolher perfil"
+              >
+                <RefreshCw className="w-4 h-4" />
+                <span className="text-sm">Mudar Perfil</span>
+              </button>
+            )}
 
             <Button 
               className="bg-[#D97706] hover:bg-[#b86105] text-white font-semibold px-8 py-6 rounded-lg shadow-md transition-all"

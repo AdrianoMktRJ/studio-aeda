@@ -95,7 +95,7 @@
 | 4 - Design | ⏳ Pendente | 0% |
 | 5 - Garantia e Cookies | ⏳ Pendente | 0% |
 | 6 - SEO e Performance | ✅ Concluída | 100% |
-| 7 - Formulários e CRM | ⏳ Pendente | 0% |
+| 7 - Responsividade | ✅ Concluída | 100% |
 | 8 - Prova Social | ⏳ Pendente | 0% |
 
 
@@ -127,17 +127,19 @@
 ## 🔄 Fase 5: Integração HubSpot CRM
 
 ### Configuração HubSpot
-- [ ] Verificar ferramentas disponíveis no MCP HubSpot
-- [ ] Testar conexão com HubSpot API
-- [ ] Criar propriedades customizadas no HubSpot (nicho, número de obras/processos)
+- [x] Verificar ferramentas disponíveis no MCP HubSpot
+- [ ] Autenticar com HubSpot API
+- [ ] Criar propriedades customizadas no HubSpot (tipo_cliente, numero_obras, area_atuacao, porte_empresa, principais_desafios)
 
 ### Integração de Formulários
+- [ ] Criar endpoint tRPC para enviar dados ao HubSpot
 - [ ] Integrar formulário da página Construtoras com HubSpot
 - [ ] Integrar formulário da página Advogados com HubSpot
 - [ ] Integrar formulário da página Contato com HubSpot
 - [ ] Criar contatos automaticamente no HubSpot
 - [ ] Criar deals automaticamente com informações do formulário
 - [ ] Adicionar tags de segmentação (Construtoras/Advogados)
+- [ ] Associar deals com contatos
 
 ### Testes
 - [ ] Testar envio de formulário Construtoras

@@ -3,59 +3,132 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { Bot, BarChart3, Megaphone, Cog } from "lucide-react";
+import { Bot, BarChart3, Megaphone, Cog, Building2, Scale } from "lucide-react";
+import { useState } from "react";
+
+type ProfileType = "construtora" | "advocacia";
 
 export default function Servicos() {
-  const services = [
-    {
-      icon: Bot,
-      title: "Automação Inteligente",
-      description:
-        "Automatize processos repetitivos e libere sua equipe para focar em tarefas estratégicas. Implementamos soluções de IA que aprendem e se adaptam ao seu negócio.",
-      features: [
-        "Chatbots e assistentes virtuais",
-        "Automação de workflows",
-        "Processamento de documentos",
-        "Integração de sistemas",
+  const [selectedProfile, setSelectedProfile] = useState<ProfileType>("construtora");
+
+  const servicesContent = {
+    construtora: {
+      services: [
+        {
+          icon: Bot,
+          title: "Automação Inteligente",
+          description:
+            "Automatize processos de orçamento, controle de obras e gestão de fornecedores. Libere sua equipe para focar no que realmente importa: entregar projetos de qualidade.",
+          features: [
+            "Automação de orçamentos e propostas",
+            "Controle de obras e cronogramas",
+            "Gestão automatizada de fornecedores",
+            "Processamento de documentos técnicos",
+          ],
+        },
+        {
+          icon: BarChart3,
+          title: "Análise de Dados e BI",
+          description:
+            "Dashboards em tempo real para acompanhar custos, prazos e produtividade de cada obra. Tome decisões baseadas em dados concretos.",
+          features: [
+            "Dashboard de obras em andamento",
+            "Análise de custos e margens",
+            "Previsão de prazos e recursos",
+            "Relatórios de produtividade",
+          ],
+        },
+        {
+          icon: Megaphone,
+          title: "Marketing Digital com IA",
+          description:
+            "Atraia mais clientes qualificados para seus empreendimentos. Campanhas otimizadas para gerar leads de alto valor no mercado imobiliário.",
+          features: [
+            "Campanhas para lançamentos",
+            "Segmentação por perfil de comprador",
+            "Anúncios otimizados por IA",
+            "Análise de ROI por empreendimento",
+          ],
+        },
+        {
+          icon: Cog,
+          title: "Consultoria em IA",
+          description:
+            "Identificamos oportunidades de automação específicas para construtoras: desde o comercial até a entrega de chaves.",
+          features: [
+            "Diagnóstico de processos construtivos",
+            "Roadmap de digitalização",
+            "Treinamento de equipes técnicas",
+            "Suporte contínuo especializado",
+          ],
+        },
       ],
+      cta: {
+        title: "Pronto para modernizar sua construtora?",
+        description:
+          "Agende uma conversa e descubra como IA pode reduzir custos e aumentar a eficiência das suas obras.",
+      },
     },
-    {
-      icon: BarChart3,
-      title: "Análise de Dados e BI",
-      description:
-        "Transforme dados brutos em insights acionáveis. Criamos dashboards inteligentes e relatórios que facilitam a tomada de decisão.",
-      features: [
-        "Dashboards personalizados",
-        "Análise preditiva",
-        "Visualização de dados",
-        "Relatórios automatizados",
+    advocacia: {
+      services: [
+        {
+          icon: Bot,
+          title: "Automação Inteligente",
+          description:
+            "Automatize petições, contratos e análise de processos. Reduza tempo em tarefas repetitivas e foque em estratégia jurídica.",
+          features: [
+            "Geração automatizada de petições",
+            "Revisão inteligente de contratos",
+            "Análise de jurisprudência",
+            "Gestão automatizada de prazos",
+          ],
+        },
+        {
+          icon: BarChart3,
+          title: "Análise de Dados e BI",
+          description:
+            "Acompanhe KPIs do escritório: taxa de sucesso, tempo médio de processos, produtividade por advogado e rentabilidade por área.",
+          features: [
+            "Dashboard de processos ativos",
+            "Análise de rentabilidade por área",
+            "Previsão de resultados processuais",
+            "Relatórios de produtividade",
+          ],
+        },
+        {
+          icon: Megaphone,
+          title: "Marketing Digital com IA",
+          description:
+            "Posicione seu escritório como referência na sua área de atuação. Atraia clientes de alto valor com estratégias inteligentes.",
+          features: [
+            "Campanhas para captação de clientes",
+            "Segmentação por área jurídica",
+            "Conteúdo otimizado para advogados",
+            "Análise de ROI por campanha",
+          ],
+        },
+        {
+          icon: Cog,
+          title: "Consultoria em IA",
+          description:
+            "Orientação estratégica para implementar IA no seu escritório: da gestão de processos ao relacionamento com clientes.",
+          features: [
+            "Diagnóstico de processos jurídicos",
+            "Roadmap de transformação digital",
+            "Treinamento para equipe jurídica",
+            "Suporte especializado contínuo",
+          ],
+        },
       ],
+      cta: {
+        title: "Pronto para digitalizar seu escritório?",
+        description:
+          "Agende uma conversa e descubra como IA pode aumentar a produtividade e rentabilidade do seu escritório.",
+      },
     },
-    {
-      icon: Megaphone,
-      title: "Marketing Digital com IA",
-      description:
-        "Estratégias de tráfego pago otimizadas por inteligência artificial para maximizar seu ROI e atrair clientes qualificados.",
-      features: [
-        "Campanhas otimizadas por IA",
-        "Segmentação inteligente",
-        "Análise de performance",
-        "Automação de marketing",
-      ],
-    },
-    {
-      icon: Cog,
-      title: "Consultoria em IA",
-      description:
-        "Orientação estratégica para implementar IA no seu negócio de forma eficiente e sustentável. Identificamos oportunidades e traçamos o melhor caminho.",
-      features: [
-        "Diagnóstico de processos",
-        "Roadmap de implementação",
-        "Treinamento de equipes",
-        "Suporte contínuo",
-      ],
-    },
-  ];
+  };
+
+  const currentContent = servicesContent[selectedProfile];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -71,14 +144,51 @@ export default function Servicos() {
         </div>
       </section>
 
+      {/* Seletor de Perfil */}
+      <section className="py-12 bg-gray-50 border-b border-gray-200">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto">
+            <p className="text-center text-gray-600 mb-6 text-lg">
+              Escolha seu segmento para ver exemplos específicos:
+            </p>
+            
+            <div className="flex gap-4 justify-center">
+              <button
+                onClick={() => setSelectedProfile("construtora")}
+                className={`flex items-center gap-3 px-8 py-4 rounded-lg font-semibold text-lg transition-all ${
+                  selectedProfile === "construtora"
+                    ? "bg-[#1e3a8a] text-white shadow-lg scale-105"
+                    : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-300"
+                }`}
+              >
+                <Building2 className="w-6 h-6" />
+                Construtoras
+              </button>
+
+              <button
+                onClick={() => setSelectedProfile("advocacia")}
+                className={`flex items-center gap-3 px-8 py-4 rounded-lg font-semibold text-lg transition-all ${
+                  selectedProfile === "advocacia"
+                    ? "bg-[#1e3a8a] text-white shadow-lg scale-105"
+                    : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-300"
+                }`}
+              >
+                <Scale className="w-6 h-6" />
+                Advogados
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Serviços */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index) => (
+            {currentContent.services.map((service, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow border border-gray-100"
+                className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-all border border-gray-100 animate-in fade-in duration-300"
               >
                 <div className="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
                   <service.icon className="w-7 h-7 text-[#1e3a8a]" />
@@ -110,23 +220,23 @@ export default function Servicos() {
             {[
               {
                 step: "01",
-                title: "Diagnóstico",
-                description: "Analisamos seus processos e identificamos oportunidades de melhoria",
+                title: "Análise",
+                description: "Entendemos profundamente seus processos e identificamos oportunidades",
               },
               {
                 step: "02",
-                title: "Planejamento",
+                title: "Estratégia",
                 description: "Desenhamos a solução ideal sob medida para suas necessidades",
               },
               {
                 step: "03",
-                title: "Implementação",
-                description: "Desenvolvemos e implantamos a solução com acompanhamento próximo",
+                title: "Desenvolvimento",
+                description: "Implementamos a solução com acompanhamento próximo e transparente",
               },
               {
                 step: "04",
-                title: "Otimização",
-                description: "Monitoramos resultados e otimizamos continuamente",
+                title: "Acompanhamento",
+                description: "Monitoramos resultados e otimizamos continuamente para máximo ROI",
               },
             ].map((phase, index) => (
               <div key={index} className="text-center">
@@ -145,10 +255,10 @@ export default function Servicos() {
       <section className="bg-gradient-to-br from-[#1e3a8a] to-[#0f2847] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Pronto para transformar seu negócio com IA?
+            {currentContent.cta.title}
           </h2>
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Agende um diagnóstico gratuito e descubra como podemos ajudar sua empresa a crescer
+            {currentContent.cta.description}
           </p>
           
           <Button
@@ -156,7 +266,7 @@ export default function Servicos() {
             className="bg-[#f97316] hover:bg-[#b45309] text-white font-semibold px-10 py-7 text-lg rounded-lg shadow-lg transition-all"
             asChild
           >
-            <Link href="/contato">Agendar Agendar Contato</Link>
+            <Link href="/contato">Agendar Contato</Link>
           </Button>
         </div>
       </section>

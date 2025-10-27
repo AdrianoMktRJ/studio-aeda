@@ -1,19 +1,9 @@
-import { useEffect, useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { CheckCircle, Zap, Target, TrendingUp, Users, Brain, ArrowRight } from "lucide-react";
-import ProfileSelector from "@/components/ProfileSelector";
 
 export default function Home() {
-  const [showProfileSelector, setShowProfileSelector] = useState(false);
-
-  useEffect(() => {
-    const hasSelectedProfile = localStorage.getItem("selectedProfile");
-    if (!hasSelectedProfile) {
-      const timer = setTimeout(() => setShowProfileSelector(true), 3000);
-      return () => clearTimeout(timer);
-    }
-  }, []);
 
   const benefits = [
     {
@@ -103,8 +93,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      {showProfileSelector && <ProfileSelector />}
-
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-[#1e3a8a] to-[#1e3a8a]/90">
         <div className="container mx-auto max-w-4xl text-center">

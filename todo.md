@@ -141,3 +141,16 @@
 - [x] Atualizar Home.tsx com novo CTA
 - [x] Atualizar Sobre.tsx com novo CTA
 
+
+
+
+## 🎯 Nova Feature: Seletor de Perfil Integrado na Página de Serviços
+- [ ] Remover modal intrusivo ProfileSelector atual
+- [ ] Criar toggle elegante de segmentação (Construtoras/Advogados) na página Serviços
+- [ ] Implementar conteúdo dinâmico baseado na seleção
+- [ ] Personalizar exemplos de serviços por segmento
+- [ ] Personalizar CTAs por segmento
+- [ ] Manter conteúdo geral visível
+- [ ] Garantir UX não intrusiva
+- [ ] Testar responsividade do toggle
+

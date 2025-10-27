@@ -4,8 +4,7 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import { ProfileProvider } from "./contexts/ProfileContext";
-import ProfileSelector from "./components/ProfileSelector";
+
 import Home from "./pages/Home";
 import Sobre from "./pages/Sobre";
 import Servicos from "./pages/Servicos";
@@ -44,13 +43,10 @@ function App() {
         defaultTheme="light"
         // switchable
       >
-        <ProfileProvider>
-          <TooltipProvider>
-            <Toaster />
-            <ProfileSelector />
-            <Router />
-          </TooltipProvider>
-        </ProfileProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Router />
+        </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );

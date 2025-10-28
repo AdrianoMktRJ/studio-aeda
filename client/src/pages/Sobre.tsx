@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Heart, Lightbulb, Target, Users, ArrowRight } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function Sobre() {
   const values = [
@@ -28,6 +30,7 @@ export default function Sobre() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Header />
       {/* Hero */}
       <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-[#1e3a8a] to-[#1e3a8a]/90">
         <div className="container mx-auto max-w-4xl text-center">
@@ -157,6 +160,7 @@ export default function Sobre() {
           </Button>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

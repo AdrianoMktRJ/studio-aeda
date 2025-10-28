@@ -28,7 +28,6 @@ export default function Home() {
   const services = [
     {
       title: "Mentoria IA na Prática",
-      price: "R$ 2.000 - R$ 2.500",
       duration: "4 semanas",
       description: "Aprenda a implementar IA no seu negócio com suporte personalizado",
       features: [
@@ -42,7 +41,6 @@ export default function Home() {
     },
     {
       title: "Consultoria AEDA Performance",
-      price: "R$ 3.500 - R$ 6.000",
       duration: "4-6 semanas",
       description: "Implementação completa de automação e IA no seu processo",
       features: [
@@ -56,7 +54,6 @@ export default function Home() {
     },
     {
       title: "Premium AEDA Evolution",
-      price: "R$ 8.000 - R$ 8.500",
       duration: "6-8 semanas",
       description: "Transformação digital completa com IA, automação e dados",
       features: [
@@ -174,10 +171,7 @@ export default function Home() {
                     : "bg-white border border-gray-200 text-gray-900"
                 }`}
               >
-                <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
-                <p className={`text-lg font-semibold mb-2 ${service.highlight ? "text-[#f97316]" : "text-[#f97316]"}`}>
-                  {service.price}
-                </p>
+                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                 <p className={`text-sm mb-4 ${service.highlight ? "text-blue-100" : "text-gray-600"}`}>
                   Duração: {service.duration}
                 </p>

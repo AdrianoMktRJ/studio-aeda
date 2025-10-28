@@ -166,3 +166,16 @@
 - [x] Criar hook useScrollReveal para detectar elementos no viewport
 
 
+
+
+
+## 🔧 Correções Urgentes - 28/10/2025
+
+- [x] Corrigir logo com fundo branco - tornar transparente (já estava correto)
+- [ ] Implementar filtro único de profissão (remover abas separadas Construtoras/Advogados)
+- [ ] Implementar funcionalidade de troca de idiomas (PT/EN/ES)
+- [x] Adicionar Header em todas as páginas que estão sem cabeçalho (Sobre, Contato)
+
+
+- [x] Remover valores dos planos de serviços (manter apenas descrições)
+

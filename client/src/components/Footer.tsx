@@ -4,8 +4,6 @@ import { Mail, Phone, Instagram, Linkedin, Facebook } from "lucide-react";
 export default function Footer() {
   const navItems = [
     { label: "Home", path: "/" },
-    { label: "Construtoras", path: "/construtoras" },
-    { label: "Advogados", path: "/advogados" },
     { label: "Sobre", path: "/sobre" },
     { label: "Serviços", path: "/servicos" },
     { label: "Contato", path: "/contato" },

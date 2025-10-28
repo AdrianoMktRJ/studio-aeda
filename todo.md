@@ -172,7 +172,9 @@
 ## 🔧 Correções Urgentes - 28/10/2025
 
 - [x] Corrigir logo com fundo branco - tornar transparente (já estava correto)
-- [ ] Implementar filtro único de profissão (remover abas separadas Construtoras/Advogados)
+- [x] Implementar filtro único de profissão na Home (seletor Advogados/Construtoras)
+- [x] Remover links Construtoras e Advogados do Header e Footer
+- [x] Manter páginas /construtoras e /advogados com acesso via seletor na Home
 - [ ] Implementar funcionalidade de troca de idiomas (PT/EN/ES)
 - [x] Adicionar Header em todas as páginas que estão sem cabeçalho (Sobre, Contato)
 

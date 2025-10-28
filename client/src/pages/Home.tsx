@@ -1,9 +1,10 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { CheckCircle, Zap, Target, TrendingUp, Users, Brain, ArrowRight } from "lucide-react";
+import { CheckCircle, Zap, Target, TrendingUp, Users, Brain, ArrowRight, Building2, Scale } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useState } from "react";
 
 export default function Home() {
 
@@ -100,8 +101,27 @@ export default function Home() {
             Gestão Inteligente com IA
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
-            Mais produtividade, menos complexidade. Automação e IA sob medida para construtoras e escritórios de advocacia.
+            Mais produtividade, menos complexidade. Automação e IA sob medida para seu negócio.
           </p>
+          
+          {/* Seletor de Perfil */}
+          <div className="mb-6">
+            <p className="text-white/90 text-lg mb-4">Escolha seu perfil:</p>
+            <div className="flex justify-center gap-4">
+              <Link href="/construtoras">
+                <button className="flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all bg-[#f97316] hover:bg-[#b86105] text-white shadow-lg hover:scale-105">
+                  <Building2 className="w-5 h-5" />
+                  Construtoras
+                </button>
+              </Link>
+              <Link href="/advogados">
+                <button className="flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all bg-[#f97316] hover:bg-[#b86105] text-white shadow-lg hover:scale-105">
+                  <Scale className="w-5 h-5" />
+                  Advogados
+                </button>
+              </Link>
+            </div>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold px-8 py-6 rounded-lg shadow-md transition-all text-lg"

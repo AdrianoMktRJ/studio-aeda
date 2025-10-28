@@ -183,4 +183,5 @@
 
 
 - [x] Corrigir fundo branco do logo (garantir transparência real)
+- [ ] Adicionar animação no Método A.E.D.A. (círculos)
 

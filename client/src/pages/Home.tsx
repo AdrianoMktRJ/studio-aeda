@@ -146,8 +146,8 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center text-[#1e3a8a] mb-12">Nosso Método A.E.D.A.</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {aedaMethod.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-[#f97316] text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
+              <div key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 200}ms` }}>
+                <div className="w-16 h-16 bg-[#f97316] text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:bg-[#ea580c]">
                   {step.letter}
                 </div>
                 <h3 className="text-xl font-bold text-[#1e3a8a] mb-2">{step.title}</h3>

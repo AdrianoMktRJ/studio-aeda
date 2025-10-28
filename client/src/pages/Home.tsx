@@ -2,6 +2,8 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { CheckCircle, Zap, Target, TrendingUp, Users, Brain, ArrowRight } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function Home() {
 
@@ -93,6 +95,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Header />
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-[#1e3a8a] to-[#1e3a8a]/90">
         <div className="container mx-auto max-w-4xl text-center">
@@ -250,6 +253,7 @@ export default function Home() {
           </Button>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

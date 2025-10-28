@@ -181,3 +181,6 @@
 
 - [x] Remover valores dos planos de serviços (manter apenas descrições)
 
+
+- [x] Corrigir fundo branco do logo (garantir transparência real)
+

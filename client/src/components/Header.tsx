@@ -88,7 +88,7 @@ export default function Header() {
               className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold px-8 py-6 rounded-lg shadow-md transition-all"
               asChild
             >
-              <Link href="/diagnostico">Diagnóstico Gratuito</Link>
+              <Link href="/contato">Agendar Contato</Link>
             </Button>
           </nav>
 
@@ -139,7 +139,7 @@ export default function Header() {
                 className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold mx-4 mt-2 py-6"
                 asChild
               >
-                <Link href="/diagnostico">Diagnóstico Gratuito</Link>
+                <Link href="/contato">Agendar Contato</Link>
               </Button>
             </nav>
           </div>

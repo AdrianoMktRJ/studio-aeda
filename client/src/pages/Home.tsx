@@ -261,7 +261,7 @@ export default function Home() {
             asChild
           >
             <Link href="/contato">
-              Solicitar Agendar Contato
+              Agendar Contato
               <ArrowRight className="w-5 h-5" />
             </Link>
           </Button>

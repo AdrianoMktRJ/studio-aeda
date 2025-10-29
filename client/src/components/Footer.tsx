@@ -1,5 +1,6 @@
 import { Link } from "wouter";
-import { Mail, Phone, Instagram, Linkedin, Facebook } from "lucide-react";
+import { Mail, Phone, Instagram, Facebook, Youtube } from "lucide-react";
+import { SiTiktok } from "react-icons/si";
 
 export default function Footer() {
   const navItems = [
@@ -11,8 +12,9 @@ export default function Footer() {
 
   const socialLinks = [
     { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/studioaedadigital/" },
-    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/studio-aeda-digital" },
     { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/profile.php?id=61578330103145" },
+    { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@studioaeda.digital" },
+    { icon: SiTiktok, label: "TikTok", href: "https://www.tiktok.com/@studio.aeda" },
   ];
 
   return (

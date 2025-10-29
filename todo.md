@@ -231,3 +231,14 @@
 - [ ] Adicionar alt text descritivo
 - [ ] Testar performance após adição de imagens
 
+
+
+
+## 🔗 Correção de Links de Redes Sociais - 29/10/2025
+
+- [x] Atualizar link do Instagram para https://www.instagram.com/studioaedadigital/
+- [x] Atualizar link do Facebook para https://www.facebook.com/profile.php?id=61578330103145
+- [x] Adicionar link do YouTube: https://www.youtube.com/@studioaeda.digital
+- [x] Adicionar link do TikTok: https://www.tiktok.com/@studio.aeda
+- [x] Remover LinkedIn (não possui perfil ativo)
+

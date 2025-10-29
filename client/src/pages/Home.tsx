@@ -96,46 +96,57 @@ export default function Home() {
       <Header />
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-[#1e3a8a] to-[#1e3a8a]/90">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Gestão Inteligente com IA
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
-            Mais produtividade, menos complexidade. Automação e IA sob medida para seu negócio.
-          </p>
-          
-          {/* Seletor de Perfil */}
-          <div className="mb-6">
-            <p className="text-white/90 text-lg mb-4">Escolha seu perfil:</p>
-            <div className="flex justify-center gap-4">
-              <Link href="/construtoras">
-                <button className="flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all bg-[#f97316] hover:bg-[#b86105] text-white shadow-lg hover:scale-105">
-                  <Building2 className="w-5 h-5" />
-                  Construtoras
-                </button>
-              </Link>
-              <Link href="/advogados">
-                <button className="flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all bg-[#f97316] hover:bg-[#b86105] text-white shadow-lg hover:scale-105">
-                  <Scale className="w-5 h-5" />
-                  Advogados
-                </button>
-              </Link>
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                Gestão Inteligente com IA
+              </h1>
+              <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
+                Mais produtividade, menos complexidade. Automação e IA sob medida para seu negócio.
+              </p>
+              
+              {/* Seletor de Perfil */}
+              <div className="mb-6">
+                <p className="text-white/90 text-lg mb-4">Escolha seu perfil:</p>
+                <div className="flex justify-center lg:justify-start gap-4">
+                  <Link href="/construtoras">
+                    <button className="flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all bg-[#f97316] hover:bg-[#b86105] text-white shadow-lg hover:scale-105">
+                      <Building2 className="w-5 h-5" />
+                      Construtoras
+                    </button>
+                  </Link>
+                  <Link href="/advogados">
+                    <button className="flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all bg-[#f97316] hover:bg-[#b86105] text-white shadow-lg hover:scale-105">
+                      <Scale className="w-5 h-5" />
+                      Advogados
+                    </button>
+                  </Link>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button
+                  className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold px-8 py-6 rounded-lg shadow-md transition-all text-lg"
+                  asChild
+                >
+                  <Link href="/contato">Agendar Contato</Link>
+                </Button>
+                <Button
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white/10 font-semibold px-8 py-6 rounded-lg text-lg"
+                  asChild
+                >
+                  <Link href="/sobre">Saiba Mais</Link>
+                </Button>
+              </div>
             </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold px-8 py-6 rounded-lg shadow-md transition-all text-lg"
-              asChild
-            >
-              <Link href="/contato">Agendar Contato</Link>
-            </Button>
-            <Button
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white/10 font-semibold px-8 py-6 rounded-lg text-lg"
-              asChild
-            >
-              <Link href="/sobre">Saiba Mais</Link>
-            </Button>
+            <div className="hidden lg:block">
+              <img 
+                src="/images/hero-dashboard.webp" 
+                alt="Dashboard de IA e Automação" 
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -43,9 +43,10 @@ export default function Sobre() {
 
       {/* História */}
       <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold text-[#1e3a8a] mb-8">Nossa História</h2>
-          <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl font-bold text-[#1e3a8a] mb-12 text-center">Nossa História</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
             <p>
               Studio AEDA Digital nasceu da frustração de profissionais que viam suas horas sendo consumidas por tarefas repetitivas e sem valor agregado. Advogados perdendo prazos, construtoras sem controle de custos, empresas inteiras operando com processos manuais.
             </p>
@@ -58,6 +59,14 @@ export default function Sobre() {
             <p>
               Hoje, ajudamos dezenas de empresas a automatizar seus processos, aumentar produtividade e crescer com confiança.
             </p>
+            </div>
+            <div>
+              <img 
+                src="/images/team-consulting.jpg" 
+                alt="Equipe de consultoria em tecnologia" 
+                className="rounded-lg shadow-xl"
+              />
+            </div>
           </div>
         </div>
       </section>

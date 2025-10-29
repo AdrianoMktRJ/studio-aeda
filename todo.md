@@ -207,3 +207,27 @@
 - [x] Remover código relacionado ao menu de idiomas
 - [x] Limpar imports não utilizados (Globe icon)
 
+
+
+
+## 🎨 Implementação de Imagens - 29/10/2025
+
+### Hero Section (Home)
+- [x] Buscar/gerar imagem de IA/automação/dashboard
+- [x] Adicionar imagem ao lado do texto no Hero
+- [x] Otimizar imagem para web (WebP, tamanho adequado)
+
+### Página Sobre
+- [x] Adicionar imagem representando equipe/valores
+- [x] Posicionar imagem estrategicamente no layout
+
+### Página Serviços
+- [ ] Melhorar ícones visuais dos serviços
+- [ ] Adicionar ilustrações para cada serviço (opcional)
+
+### Otimizações
+- [ ] Converter imagens para WebP
+- [ ] Adicionar lazy loading
+- [ ] Adicionar alt text descritivo
+- [ ] Testar performance após adição de imagens
+

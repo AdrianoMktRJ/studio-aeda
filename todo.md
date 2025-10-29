@@ -198,3 +198,12 @@
 - [x] Padronizar links para /contato ao invés de /diagnostico
 - [x] Aplicar mudanças em versões desktop e mobile do Header
 
+
+
+
+## 🔧 Remoção de Funcionalidades Não Implementadas - 29/10/2025
+
+- [x] Remover botão de seletor de idiomas (PT/EN/ES) do Header
+- [x] Remover código relacionado ao menu de idiomas
+- [x] Limpar imports não utilizados (Globe icon)
+

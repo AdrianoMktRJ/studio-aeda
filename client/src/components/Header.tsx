@@ -1,25 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
-
 
   const navItems = [
     { label: "Home", path: "/" },
     { label: "Sobre", path: "/sobre" },
     { label: "Serviços", path: "/servicos" },
     { label: "Contato", path: "/contato" },
-  ];
-
-  const languages = [
-    { code: "pt", label: "🇧🇷 PT", active: true },
-    { code: "en", label: "🇺🇸 EN", active: false },
-    { code: "es", label: "🇪🇸 ES", active: false },
   ];
 
   return (
@@ -54,35 +46,6 @@ export default function Header() {
                 </button>
               </Link>
             ))}
-
-            {/* Language Selector */}
-            <div className="relative">
-              <button
-                onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
-                className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
-              >
-                <Globe className="w-4 h-4" />
-                <span className="text-sm">PT</span>
-              </button>
-              
-              {languageMenuOpen && (
-                <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-200 py-2 min-w-[120px]">
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-50 transition-colors ${
-                        lang.active ? "text-[#1e3a8a] font-medium" : "text-gray-700"
-                      }`}
-                      onClick={() => setLanguageMenuOpen(false)}
-                    >
-                      {lang.label}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-
-
 
             <Button 
               className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold px-8 py-6 rounded-lg shadow-md transition-all"
@@ -119,21 +82,6 @@ export default function Header() {
                   </button>
                 </Link>
               ))}
-              
-              <div className="flex gap-2 px-4 py-2">
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    className={`px-3 py-1 rounded text-sm ${
-                      lang.active
-                        ? "bg-[#1e3a8a] text-white"
-                        : "bg-gray-100 text-gray-700"
-                    }`}
-                  >
-                    {lang.label}
-                  </button>
-                ))}
-              </div>
 
               <Button 
                 className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold mx-4 mt-2 py-6"

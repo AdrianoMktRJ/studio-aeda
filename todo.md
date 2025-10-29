@@ -176,6 +176,9 @@
 - [x] Remover links Construtoras e Advogados do Header e Footer
 - [x] Manter páginas /construtoras e /advogados com acesso via seletor na Home
 - [ ] Implementar funcionalidade de troca de idiomas (PT/EN/ES)
+- [x] Corrigir nomenclatura: "Diagnóstico Gratuito" → "Agendar Contato" (Header)
+- [x] Simplificar CTA: "Solicitar Agendar Contato" → "Agendar Contato" (Home)
+- [x] Padronizar links para /contato ao invés de /diagnostico
 - [x] Adicionar Header em todas as páginas que estão sem cabeçalho (Sobre, Contato)
 
 
@@ -184,4 +187,14 @@
 
 - [x] Corrigir fundo branco do logo (garantir transparência real)
 - [x] Adicionar animação no Método A.E.D.A. (círculos)
+
+
+
+
+## ✅ Correções de Nomenclatura - 29/10/2025 (CONCLUÍDA)
+
+- [x] Corrigir nomenclatura: "Diagnóstico Gratuito" → "Agendar Contato" (Header)
+- [x] Simplificar CTA: "Solicitar Agendar Contato" → "Agendar Contato" (Home)
+- [x] Padronizar links para /contato ao invés de /diagnostico
+- [x] Aplicar mudanças em versões desktop e mobile do Header
 

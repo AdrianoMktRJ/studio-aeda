@@ -20,25 +20,25 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* Logo e Descrição */}
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
+          {/* Logo e Descrição - 5 colunas */}
+          <div className="md:col-span-5">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-lg flex items-center justify-center p-1">
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center p-1">
                 <img src="/logo-aeda.png" alt="AEDA Logo" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col justify-center items-start">
-                <span className="text-lg font-bold text-[#1e3a8a] leading-none">Studio AEDA Digital</span>
-                <span className="text-xs text-gray-400 leading-none mt-1">Intelligent management with AI</span>
+                <span className="text-base font-bold text-white leading-none">Studio AEDA Digital</span>
+                <span className="text-xs text-gray-500 leading-none mt-1">Intelligent management with AI</span>
               </div>
             </div>
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <p className="text-sm text-gray-400 leading-relaxed mb-6">
               Transformamos tecnologia em clareza: simplificamos processos, aumentamos produtividade 
               e geramos crescimento por meio de IA, automação e dados.
             </p>
             
             {/* Social Links */}
-            <div className="flex gap-4 mt-6">
+            <div className="flex gap-3">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
@@ -54,13 +54,13 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Navegação */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Navegação</h3>
+          {/* Navegação - 3 colunas */}
+          <div className="md:col-span-3">
+            <h3 className="text-base font-semibold mb-4 text-white">Navegação</h3>
             <nav className="flex flex-col gap-2">
               {navItems.map((item) => (
                 <Link key={item.path} href={item.path}>
-                  <button className="text-gray-400 hover:text-white text-left transition-colors">
+                  <button className="text-sm text-gray-400 hover:text-white text-left transition-colors">
                     {item.label}
                   </button>
                 </Link>
@@ -68,45 +68,45 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Contato */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contato</h3>
+          {/* Contato - 4 colunas */}
+          <div className="md:col-span-4">
+            <h3 className="text-base font-semibold mb-4 text-white">Contato</h3>
             <div className="flex flex-col gap-3">
               <div>
-                <p className="text-sm text-gray-500 mb-1">E-mail</p>
+                <p className="text-xs text-gray-500 mb-1">E-mail</p>
                 <a
                   href="mailto:s.aedadigital@gmail.com"
-                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-2"
+                  className="text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-2"
                 >
-                  <Mail className="w-4 h-4" />
-                  s.aedadigital@gmail.com
+                  <Mail className="w-4 h-4 flex-shrink-0" />
+                  <span>s.aedadigital@gmail.com</span>
                 </a>
               </div>
               
               <div>
-                <p className="text-sm text-gray-500 mb-1">WhatsApp</p>
+                <p className="text-xs text-gray-500 mb-1">WhatsApp</p>
                 <a
                   href="https://wa.me/5583993751326"
-                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-2"
+                  className="text-sm text-gray-300 hover:text-white transition-colors flex items-center gap-2"
                 >
-                  <Phone className="w-4 h-4" />
-                  +55 (83) 99375-1326
+                  <Phone className="w-4 h-4 flex-shrink-0" />
+                  <span>+55 (83) 99375-1326</span>
                 </a>
               </div>
               
               <div>
-                <p className="text-sm text-gray-500 mb-1">Horário</p>
-                <p className="text-gray-300">Seg-Sex: 9h às 18h</p>
+                <p className="text-xs text-gray-500 mb-1">Horário</p>
+                <p className="text-sm text-gray-300">Seg-Sex: 9h às 18h</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
-          <p>© 2025 Studio AEDA Digital. Todos os direitos reservados.</p>
+        <div className="border-t border-gray-800 pt-6 text-center">
+          <p className="text-sm text-gray-500">© 2025 Studio AEDA Digital. Todos os direitos reservados.</p>
           <Link href="/privacidade">
-            <button className="text-gray-400 hover:text-white transition-colors mt-2">
+            <button className="text-sm text-gray-400 hover:text-white transition-colors mt-2">
               Política de Privacidade e LGPD
             </button>
           </Link>

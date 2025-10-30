@@ -242,3 +242,15 @@
 - [x] Adicionar link do TikTok: https://www.tiktok.com/@studio.aeda
 - [x] Remover LinkedIn (não possui perfil ativo)
 
+
+
+
+## 🎨 Melhorias de Alinhamento e Harmonia - Footer - 29/10/2025
+
+- [x] Ajustar grid do Footer para colunas mais equilibradas (5-3-4)
+- [x] Alinhar títulos das seções verticalmente
+- [x] Padronizar espaçamento entre elementos (gap-3, gap-2)
+- [x] Melhorar tipografia (tamanhos e pesos consistentes)
+- [x] Ajustar espaçamento dos ícones sociais (gap-3, w-10 h-10)
+- [x] Garantir responsividade em mobile
+

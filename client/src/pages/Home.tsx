@@ -95,29 +95,33 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Header />
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-[#1e3a8a] to-[#1e3a8a]/90">
-        <div className="container mx-auto max-w-6xl">
+      <section className="pt-32 pb-20 px-4 bg-gradient-to-br from-[#1e3a8a] via-[#2563eb] to-[#1e40af] relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
+        </div>
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
                 Gestão Inteligente com IA
               </h1>
-              <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
+              <p className="text-xl md:text-2xl text-blue-50/90 mb-10 leading-relaxed">
                 Mais produtividade, menos complexidade. Automação e IA sob medida para seu negócio.
               </p>
               
               {/* Seletor de Perfil */}
               <div className="mb-6">
-                <p className="text-white/90 text-lg mb-4">Escolha seu perfil:</p>
+                <p className="text-white/80 text-base mb-4 font-medium">Escolha seu perfil:</p>
                 <div className="flex justify-center lg:justify-start gap-4">
                   <Link href="/construtoras">
-                    <button className="flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all bg-[#f97316] hover:bg-[#b86105] text-white shadow-lg hover:scale-105">
+                    <button className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 bg-gradient-to-r from-[#f97316] to-[#ea580c] hover:from-[#ea580c] hover:to-[#c2410c] text-white shadow-lg hover:shadow-2xl hover:scale-105 hover:-translate-y-1">
                       <Building2 className="w-5 h-5" />
                       Construtoras
                     </button>
                   </Link>
                   <Link href="/advogados">
-                    <button className="flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all bg-[#f97316] hover:bg-[#b86105] text-white shadow-lg hover:scale-105">
+                    <button className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 bg-gradient-to-r from-[#f97316] to-[#ea580c] hover:from-[#ea580c] hover:to-[#c2410c] text-white shadow-lg hover:shadow-2xl hover:scale-105 hover:-translate-y-1">
                       <Scale className="w-5 h-5" />
                       Advogados
                     </button>
@@ -126,14 +130,14 @@ export default function Home() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button
-                  className="bg-[#f97316] hover:bg-[#b86105] text-white font-semibold px-8 py-6 rounded-lg shadow-md transition-all text-lg"
+                  className="bg-gradient-to-r from-[#f97316] to-[#ea580c] hover:from-[#ea580c] hover:to-[#c2410c] text-white font-semibold px-10 py-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-lg hover:-translate-y-1"
                   asChild
                 >
                   <Link href="/contato">Agendar Contato</Link>
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white/10 font-semibold px-8 py-6 rounded-lg text-lg"
+                  className="border-2 border-white/80 text-white hover:bg-white hover:text-[#1e3a8a] font-semibold px-10 py-6 rounded-xl transition-all duration-300 text-lg hover:shadow-xl backdrop-blur-sm"
                   asChild
                 >
                   <Link href="/sobre">Saiba Mais</Link>
@@ -141,11 +145,14 @@ export default function Home() {
               </div>
             </div>
             <div className="hidden lg:block">
-              <img 
-                src="/images/hero-dashboard.webp" 
-                alt="Dashboard de IA e Automação" 
-                className="rounded-lg shadow-2xl"
-              />
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-2xl blur-3xl"></div>
+                <img 
+                  src="/images/hero-dashboard.webp" 
+                  alt="Dashboard de IA e Automação" 
+                  className="relative rounded-2xl shadow-2xl ring-1 ring-white/10 backdrop-blur-sm transform hover:scale-105 transition-transform duration-500"
+                />
+              </div>
             </div>
           </div>
         </div>

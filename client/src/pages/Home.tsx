@@ -148,8 +148,8 @@ export default function Home() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-2xl blur-3xl"></div>
                 <img 
-                  src="/images/hero-dashboard.webp" 
-                  alt="Dashboard de IA e Automação" 
+                  src="/images/hero-servicos-aeda.png" 
+                  alt="Inteligência Artificial e Automação - Studio AEDA Digital" 
                   className="relative rounded-2xl shadow-2xl ring-1 ring-white/10 backdrop-blur-sm transform hover:scale-105 transition-transform duration-500"
                 />
               </div>

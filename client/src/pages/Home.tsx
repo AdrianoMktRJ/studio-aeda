@@ -14,19 +14,19 @@ export default function Home() {
       icon: Zap,
       title: "Automação Inteligente",
       description: "Elimine tarefas repetitivas e libere tempo para decisões estratégicas",
-      image: "/images/beneficio-automacao.png"
+      image: "/images/beneficio-automacao-real-v2.png"
     },
     {
       icon: TrendingUp,
       title: "Aumento de Produtividade",
       description: "Estudos mostram que a automação pode reduzir tarefas repetitivas significativamente",
-      image: "/images/beneficio-produtividade.png"
+      image: "/images/beneficio-produtividade-real.png"
     },
     {
       icon: Brain,
       title: "Inteligência Artificial",
       description: "Tecnologia de ponta adaptada ao seu negócio",
-      image: "/images/beneficio-ia.png"
+      image: "/images/beneficio-ia-real.png"
     },
   ];
 
@@ -74,25 +74,25 @@ export default function Home() {
       letter: "A",
       title: "Análise",
       description: "Entendemos profundamente seu negócio, processos e desafios",
-      image: "/images/aeda-analise.png"
+      image: "/images/aeda-analise-real.png"
     },
     {
       letter: "E",
       title: "Estratégia",
       description: "Definimos a melhor estratégia de automação e IA para você",
-      image: "/images/aeda-estrategia.png"
+      image: "/images/aeda-estrategia-real-v2.png"
     },
     {
       letter: "D",
       title: "Desenvolvimento",
       description: "Implementamos soluções práticas e eficientes",
-      image: "/images/aeda-desenvolvimento.png"
+      image: "/images/aeda-desenvolvimento-real.png"
     },
     {
       letter: "A",
       title: "Acompanhamento",
       description: "Garantimos resultados com suporte contínuo",
-      image: "/images/aeda-acompanhamento.png"
+      image: "/images/aeda-acompanhamento-real.png"
     },
   ];
 
@@ -143,7 +143,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left animate-fade-in-up">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
-                Reduza até 15h/semana em Tarefas Repetitivas
+                Menos Trabalho Manual, Mais Resultados
               </h1>
               <p className="text-xl md:text-2xl text-blue-50/90 mb-10 leading-relaxed">
                 Automação e IA sob medida para construtoras e escritórios de advocacia. Metodologia A.E.D.A. com suporte completo do início ao fim.
@@ -183,24 +183,15 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="hidden lg:block animate-fade-in-up-delay-3">
-              <div className="relative hero-video-container">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-2xl blur-3xl"></div>
-                <video 
-                  src="/videos/hero-animated.mp4" 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline
-                  className="relative rounded-2xl shadow-2xl ring-1 ring-white/10 backdrop-blur-sm transform hover:scale-105 transition-transform duration-500 w-full"
-                  poster="/images/hero-opcao1.png"
-                >
+              <div className="hidden lg:block animate-fade-in-up-delay-3">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-purple-600/10 rounded-2xl blur-2xl"></div>
                   <img 
-                    src="/images/hero-opcao1.png" 
-                    alt="Inteligência Artificial e Automação - Studio AEDA Digital" 
-                    className="relative rounded-2xl shadow-2xl ring-1 ring-white/10 backdrop-blur-sm"
+                    src="/images/hero-professional.png" 
+                    alt="Profissional usando IA e Automação - Studio AEDA Digital"
+                    className="relative rounded-2xl shadow-2xl ring-1 ring-white/10 transform hover:scale-105 transition-transform duration-500 w-full"
                   />
-                </video>
+                </div>
               </div>
             </div>
           </div>
